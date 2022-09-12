@@ -1,0 +1,1906 @@
+[
+    {
+        "maloaicay": "1",
+        "sldlr2": "Hồng mai (Anh đào giả)",
+        "sldlr": "A.dao",
+        "Tenkhoahoc": "Gliricida sepium (Jacq.) Steud.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "2",
+        "sldlr2": "Bạch đàn chanh",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus citriodora Hook. F.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "3",
+        "sldlr2": "Bạch đàn đỏ",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus robusta Sm.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "4",
+        "sldlr2": "Bạch đàn grandis",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus grandis Hill ex Maiden",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "5",
+        "sldlr2": "Bạch đàn liễu",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus exserta F. Muell.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "6",
+        "sldlr2": "Bạch đàn mũ nhỏ",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus microcorys F. Muell",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "7",
+        "sldlr2": "Bạch đàn salinha",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus saligna Smith",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "8",
+        "sldlr2": "Bạch đàn trắng caman",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus camaldulensis Dehnh.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "9",
+        "sldlr2": "Bạch đàn trắng terê",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus tereticornis Sm.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "10",
+        "sldlr2": "Bạch đàn urô",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus urophylla S.T. Blake",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "11",
+        "sldlr2": "Bồ đề",
+        "sldlr": "B.de",
+        "Tenkhoahoc": "Styrax tonkinensis (Pierre) Craib ex Hardw.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "12",
+        "sldlr2": "Bông gòn",
+        "sldlr": "B.gon",
+        "Tenkhoahoc": "Ceiba pentandra (L.) Gaertn.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "13",
+        "sldlr2": "Bồ kết",
+        "sldlr": "B.ket",
+        "Tenkhoahoc": "Gleditsia australis Hemsl.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "14",
+        "sldlr2": "Bồ kết tây",
+        "sldlr": "B.ket",
+        "Tenkhoahoc": "Albizia lebbeck (L.) Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "15",
+        "sldlr2": "Bằng lăng (Săng lẻ)",
+        "sldlr": "B.lang",
+        "Tenkhoahoc": "Lagerstroemia calyculata Kurz",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "16",
+        "sldlr2": "Bằng lăng cườm",
+        "sldlr": "B.lang",
+        "Tenkhoahoc": "Lagerstroemia angustifolia Pierre ex Gagnep.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "17",
+        "sldlr2": "Bằng lăng nước",
+        "sldlr": "B.lang",
+        "Tenkhoahoc": "Lagerstroemia flos-reginae Retz.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "18",
+        "sldlr2": "Bời lời đỏ (Kháo vàng)",
+        "sldlr": "B.loi",
+        "Tenkhoahoc": "Machilus odoratissima Nees",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "19",
+        "sldlr2": "Bời lời nhớt",
+        "sldlr": "B.loi",
+        "Tenkhoahoc": "Litsea glutinosa (Lour.) C.B. Rob.(Litsea sebifera Willd.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "20",
+        "sldlr2": "Bần chua",
+        "sldlr": "Ban",
+        "Tenkhoahoc": "Sonneratia caseolaris (L.) Engl.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "21",
+        "sldlr2": "Bần ổi",
+        "sldlr": "Ban",
+        "Tenkhoahoc": "Sonneratia ovata Back.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "22",
+        "sldlr2": "Bần trắng",
+        "sldlr": "Ban",
+        "Tenkhoahoc": "Sonneratia alba Smith",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "23",
+        "sldlr2": "Bàng",
+        "sldlr": "Bang",
+        "Tenkhoahoc": "Terminalia catappa L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "24",
+        "sldlr2": "Bứa",
+        "sldlr": "Bua",
+        "Tenkhoahoc": "Garcinia oblongifolia Champ. ex Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "25",
+        "sldlr2": "Cọ khiết (Cọ lá nhỏ)",
+        "sldlr": "C.khiet",
+        "Tenkhoahoc": "Dalbergia assamica var. laccifera (Eberh & Dubard.)Niysmdham (Dalbergi balansae Prain)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "26",
+        "sldlr2": "Cọ khiết lá to (Cọ khẹt lá to)",
+        "sldlr": "C.khiet",
+        "Tenkhoahoc": "Dalbergia assamica Benth. (Dalbergi hupeana var. laccifera Eberh. & Dubard)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "27",
+        "sldlr2": "Cẩm lai (Cẩm lai bà rịa, Cẩm lai vú)",
+        "sldlr": "C.lai",
+        "Tenkhoahoc": "Dalbergia oliveri Gamble ex Prain (Dalbergia bariaensis Pierre, Dalbergia mammosa Pierre)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "28",
+        "sldlr2": "Chiêu liêu",
+        "sldlr": "C.lieu",
+        "Tenkhoahoc": "Terminalia chebula Retz.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "29",
+        "sldlr2": "Cáng lò",
+        "sldlr": "C.lo",
+        "Tenkhoahoc": "Betula alnoides Buch. Ham.ex D.Don",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "30",
+        "sldlr2": "Cà na",
+        "sldlr": "C.na",
+        "Tenkhoahoc": "Canarium subulatum Guillaume",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "31",
+        "sldlr2": "Cao su",
+        "sldlr": "C.su",
+        "Tenkhoahoc": "Hevea brasiliensis (Willd. ex Juss.) Muell - Arg.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "32",
+        "sldlr2": "Chẹo tía",
+        "sldlr": "C.tia",
+        "Tenkhoahoc": "Engeldhartia roxburghiana Wall.(Engeldhartia chrysolepis Hance)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "33",
+        "sldlr2": "Căm xe",
+        "sldlr": "C.xe",
+        "Tenkhoahoc": "Xylia xylocarpa (Roxb.) Theob.(Xylia dolabriformis Benth.)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "34",
+        "sldlr2": "Chè đắng (Chè khôm)",
+        "sldlr": "Ch.dang",
+        "Tenkhoahoc": "Ilex kaushue S.Y.Hu (Ilex kudincha C.J.Tseng, I. latifolia Bl.)",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "35",
+        "sldlr2": "Chàm cánh",
+        "sldlr": "Cham",
+        "Tenkhoahoc": "Indigofera zollingeriana Miq.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "36",
+        "sldlr2": "Chàm phụng (Đậu chàm)",
+        "sldlr": "Cham",
+        "Tenkhoahoc": "Indigofera galegoides D.C.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "37",
+        "sldlr2": "Chò chỉ",
+        "sldlr": "Cho",
+        "Tenkhoahoc": "Parashorea chinensis H. Wang",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "38",
+        "sldlr2": "Chò đen (Chò chai)",
+        "sldlr": "Cho",
+        "Tenkhoahoc": "Parashorea stellata Kurz",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "39",
+        "sldlr2": "Chò nâu",
+        "sldlr": "Cho",
+        "Tenkhoahoc": "Dipterocarpus retusus",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "40",
+        "sldlr2": "Cóc (Quả cóc)",
+        "sldlr": "Coc",
+        "Tenkhoahoc": "Spondias cytherea Sonn.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "41",
+        "sldlr2": "Dầu mít (Dầu cát)",
+        "sldlr": "D.mit",
+        "Tenkhoahoc": "D. costatus Gaert.f. (D. artocarpifolius)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "42",
+        "sldlr2": "Dái ngựa (Nhạc ngựa)",
+        "sldlr": "D.ngua",
+        "Tenkhoahoc": "Swietenia macrophylla King.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "43",
+        "sldlr2": "Dầu rái (Dầu con rái, Dầu nước)",
+        "sldlr": "D.rai",
+        "Tenkhoahoc": "Dipterocarpus alatus Roxb. ex G.Don",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "44",
+        "sldlr2": "Du sam (Mạy hinh)",
+        "sldlr": "D.sam",
+        "Tenkhoahoc": "Keteleeria evelyniana Mast. (Keteleeria roullettii (A.Chev.) Flous",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "45",
+        "sldlr2": "Du sam đá vôi",
+        "sldlr": "D.sam",
+        "Tenkhoahoc": "Keteleeria davidiana var daviana (Bertrand) Beissn (K. calcarea W.C. Cheng &L.K.Fu)",
+        "Phanbo": "Bắc",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "46",
+        "sldlr2": "Dầu song nàng",
+        "sldlr": "D.snang",
+        "Tenkhoahoc": "Dipterocarpus dyeri Pierre ex Laness.",
+        "Phanbo": "Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "47",
+        "sldlr2": "Dầu trà beng",
+        "sldlr": "D.tbeng",
+        "Tenkhoahoc": "Dipterocarpus obtusifolius Teym. ex Miq.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "48",
+        "sldlr2": "Dẻ bắc giang",
+        "sldlr": "De",
+        "Tenkhoahoc": "Castanopsis bacgiangensis",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "49",
+        "sldlr2": "Dẻ bộp (Sồi phảng)",
+        "sldlr": "De",
+        "Tenkhoahoc": "Lithocarpus fissus (Champ.ex Benth.) A. Camus; Castanopsis fissa (Champ. ex Benth.) Rehd & Wils",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "50",
+        "sldlr2": "Dẻ đỏ",
+        "sldlr": "De",
+        "Tenkhoahoc": "Lithocarpus ducampii (Hickel et A. Camus) A. Camus",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "51",
+        "sldlr2": "Dẻ gai (Cà ổi)",
+        "sldlr": "De",
+        "Tenkhoahoc": "Castanopsis indica (Roxb.) A. DC.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "52",
+        "sldlr2": "Dẻ yên thế",
+        "sldlr": "De",
+        "Tenkhoahoc": "Castanopsis boisii Hickel et A. Camus",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "53",
+        "sldlr2": "Dẻ trùng khánh",
+        "sldlr": "De.tk",
+        "Tenkhoahoc": "Castanea mollissima Blume",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "54",
+        "sldlr2": "Điều (Đào lộn hột)",
+        "sldlr": "Dieu",
+        "Tenkhoahoc": "Anacardium occidentale L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "55",
+        "sldlr2": "Đinh (Thiết đinh)",
+        "sldlr": "Dinh",
+        "Tenkhoahoc": "Markhamia stipulata (Wall.) Schum.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "56",
+        "sldlr2": "Đinh hương",
+        "sldlr": "Dinh",
+        "Tenkhoahoc": "Dysoxylum cauliflorum Hiern",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "57",
+        "sldlr2": "Đinh thối",
+        "sldlr": "Dinh",
+        "Tenkhoahoc": "Fernandoa brilletii (Dop) Steen. (Hexaneurocarpon brilletii Dop)",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "58",
+        "sldlr2": "Dọc",
+        "sldlr": "Doc",
+        "Tenkhoahoc": "Garcinia multiflora (Champ. ex Benth.), Garcinia tonkinensis Vesque",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "59",
+        "sldlr2": "Đưng (Đước bộp)",
+        "sldlr": "Duoc",
+        "Tenkhoahoc": "Rhizophora mucronata Lam.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "60",
+        "sldlr2": "Đước (Đước đôi)",
+        "sldlr": "Duoc",
+        "Tenkhoahoc": "Rhizophora apiculata Blume",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "61",
+        "sldlr2": "Đước vòi (Đâng)",
+        "sldlr": "Duoc",
+        "Tenkhoahoc": "Rhizophora stylosa Griff.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "62",
+        "sldlr2": "Gạo",
+        "sldlr": "Gao",
+        "Tenkhoahoc": "Bombax ceiba L. (Bombax malabaricum DC.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "63",
+        "sldlr2": "Giáng hương lá to",
+        "sldlr": "Gi.huong",
+        "Tenkhoahoc": "Pterocarpus macrocarpus Kurz (Pterocarpus cambodianus Pierre)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "64",
+        "sldlr2": "Giổi ăn hạt",
+        "sldlr": "Gioi",
+        "Tenkhoahoc": "Michelia tonkinensis Dandy",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "65",
+        "sldlr2": "Giổi nhung",
+        "sldlr": "Gioi",
+        "Tenkhoahoc": "Michelia braiaensis Gagnep",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "66",
+        "sldlr2": "Giổi xanh",
+        "sldlr": "Gioi",
+        "Tenkhoahoc": "Michelia mediocris Dandy",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "67",
+        "sldlr2": "Gõ đỏ (Gõ cà te)",
+        "sldlr": "Go",
+        "Tenkhoahoc": "Afzelia xylocarpa (Kurz) Craib. (Pahudia cochinchinensis Pierre; Pahudia xylocarpa Kurz)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "68",
+        "sldlr2": "Gõ nước",
+        "sldlr": "Go",
+        "Tenkhoahoc": "Intsia bijuga (Colebr.) O.Ktze (Afzelia bjuga (Colebr.) A. Gray)",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "69",
+        "sldlr2": "Gội (Gội nếp)",
+        "sldlr": "Goi",
+        "Tenkhoahoc": "Aglaia spectabilis (Miq.) Jain.& Bennet. (A. gigantea (Pierre) Pell.)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "70",
+        "sldlr2": "Gụ lau",
+        "sldlr": "Gu",
+        "Tenkhoahoc": "Sindora tonkinensis A. Chev. ex Larsen",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "71",
+        "sldlr2": "Gụ mật",
+        "sldlr": "Gu",
+        "Tenkhoahoc": "Sindora siamensis Teijm ex Miq.(Sindora cochinchinensis Baill.)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "72",
+        "sldlr2": "Hoè (Hoa hoè)",
+        "sldlr": "Hoe",
+        "Tenkhoahoc": "Styphnolobium japonica (L.) Schott (Sophora japonica L.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "73",
+        "sldlr2": "Hồi (Đại hồi)",
+        "sldlr": "Hoi",
+        "Tenkhoahoc": "Illicium verum Hook f.",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "74",
+        "sldlr2": "Hông",
+        "sldlr": "Hong",
+        "Tenkhoahoc": "Paulownia fortunei (Seem.) Hemsl.",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "75",
+        "sldlr2": "Huỷnh",
+        "sldlr": "Huynh",
+        "Tenkhoahoc": "Tarrietia javanica Blume",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "76",
+        "sldlr2": "Kim giao",
+        "sldlr": "K.giao",
+        "Tenkhoahoc": "Nageia fleuryi (Hickel) De Laub. (Podocarpus fleuryi Hickel)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "77",
+        "sldlr2": "Kiền kiền",
+        "sldlr": "K.kien",
+        "Tenkhoahoc": "Hopea siamensis Heim",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "78",
+        "sldlr2": "Kiền kiền phú quốc",
+        "sldlr": "K.kien",
+        "Tenkhoahoc": "Hopea pierrei Hance",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "79",
+        "sldlr2": "Keo lá bạc",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "A. aulacocarpa A. Cunn. ex Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "80",
+        "sldlr2": "Keo lá liềm",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "A. crassicarpa A. Cunn. ex Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "81",
+        "sldlr2": "Keo lá tràm",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "A. auriculiformis A. Cunn. ex Benth",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "82",
+        "sldlr2": "Keo lai",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "A. mangium Wild. x A. auriculiformis A. Cunn. ex Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "83",
+        "sldlr2": "Keo lông",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "Acacia torulosa Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "84",
+        "sldlr2": "Keo tai tượng",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "Acacia mangium Wild.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "85",
+        "sldlr2": "Keo tumiđê",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "Acacia tumidae S. Muell",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "86",
+        "sldlr2": "Kháo",
+        "sldlr": "Khao",
+        "Tenkhoahoc": "Phoebe cuneate Blume",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "87",
+        "sldlr2": "Lòng mang lá cụt",
+        "sldlr": "L.mang",
+        "Tenkhoahoc": "Pterospermum truncatolobatum Gagnep.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "88",
+        "sldlr2": "Lòng mang lá mác",
+        "sldlr": "L.mang",
+        "Tenkhoahoc": "Pterospermum lancaefolium Roxb.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "89",
+        "sldlr2": "Lòng mức (Thừng mức)",
+        "sldlr": "L.muc",
+        "Tenkhoahoc": "Wrightia annamensis Eberh. & Dub.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "90",
+        "sldlr2": "Long não (Dã hương)",
+        "sldlr": "L.nao",
+        "Tenkhoahoc": "Cinnamomum camphora (L.) J. Presl",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "91",
+        "sldlr2": "Lõi thọ",
+        "sldlr": "L.tho",
+        "Tenkhoahoc": "Gmelina arborea Roxb.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "92",
+        "sldlr2": "Lim xẹt",
+        "sldlr": "L.xet",
+        "Tenkhoahoc": "Pelthophorum dasyrrachis (Miq.) Kurz. var. tonkinensis (Pierre) K. & S. Larsen",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "93",
+        "sldlr2": "Lát hoa",
+        "sldlr": "Lat",
+        "Tenkhoahoc": "Chukrasia tabularis A. Juss.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "94",
+        "sldlr2": "Lát mêhicô",
+        "sldlr": "Latm",
+        "Tenkhoahoc": "Cedrela odorata",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "95",
+        "sldlr2": "Lim xanh",
+        "sldlr": "Lim",
+        "Tenkhoahoc": "Erythrophloeum fordii Oliv.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "96",
+        "sldlr2": "Mạy châu (Mạy chấu)",
+        "sldlr": "M.chau",
+        "Tenkhoahoc": "Carya tonkinensis Lecomte",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "97",
+        "sldlr2": "Mấm biển (Mắm biển)",
+        "sldlr": "Mam",
+        "Tenkhoahoc": "Avicennia marina (Fork.) Vierh.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "98",
+        "sldlr2": "Mấm lưỡi đòng (Mắm đen)",
+        "sldlr": "Mam",
+        "Tenkhoahoc": "Avicennia officinalis L.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "99",
+        "sldlr2": "Mấm quăn (Mắm quăn)",
+        "sldlr": "Mam",
+        "Tenkhoahoc": "Avicennia lanata Ridl.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "100",
+        "sldlr2": "Mấm trắng (Mắm trắng)",
+        "sldlr": "Mam",
+        "Tenkhoahoc": "Avicennia alba Blume",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "101",
+        "sldlr2": "Me",
+        "sldlr": "Me",
+        "Tenkhoahoc": "Tamarindus indica L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "102",
+        "sldlr2": "Mít",
+        "sldlr": "Mit",
+        "Tenkhoahoc": "Artocarpus intergrifolius L. f.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "103",
+        "sldlr2": "Mò lá bạc",
+        "sldlr": "Ml.bac",
+        "Tenkhoahoc": "Cryptocarya maclurei Merr.",
+        "Phanbo": "Bắc-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "104",
+        "sldlr2": "Mỡ",
+        "sldlr": "Mo",
+        "Tenkhoahoc": "Manglietia conifera Dandy,̃ Manglietia glauca Blume)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "105",
+        "sldlr2": "Mun",
+        "sldlr": "Mun",
+        "Tenkhoahoc": "Diospyros mun A. Chev. ex Le comte",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "106",
+        "sldlr2": "Mun sọc",
+        "sldlr": "Mun",
+        "Tenkhoahoc": "Diospyros sp.",
+        "Phanbo": "Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "107",
+        "sldlr2": "Muỗm",
+        "sldlr": "Muom",
+        "Tenkhoahoc": "Mangifera foetida Lour.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "108",
+        "sldlr2": "Muồng đen",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Cassia siamea Lam.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "109",
+        "sldlr2": "Muồng hoa đào (Bò cạp nước)",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Cassia javanica L.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "110",
+        "sldlr2": "Muồng hoàng yến",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Cassia fistula L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "111",
+        "sldlr2": "Muồng ngủ (Còng)",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Samanea saman (Jacq.) Merr.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "112",
+        "sldlr2": "Muồng pháo",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Calliandra calothyrsus Meissner",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "113",
+        "sldlr2": "Muồng ràng ràng (Cườm rắn)",
+        "sldlr": "Muong",
+        "Tenkhoahoc": "Adenanthera pavonina L. (A.microsperma Teysm)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "114",
+        "sldlr2": "Mù u",
+        "sldlr": "Muu",
+        "Tenkhoahoc": "Calophyllum inophyllum L.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "115",
+        "sldlr2": "Xoan chịu hạn (Neem)",
+        "sldlr": "Neem",
+        "Tenkhoahoc": "Azedirachta indica Juss.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "116",
+        "sldlr2": "Ngô đồng",
+        "sldlr": "Ng.dong",
+        "Tenkhoahoc": "Firmiana simplex (L.) W.Wight.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "117",
+        "sldlr2": "Nghiến",
+        "sldlr": "Nghien",
+        "Tenkhoahoc": "Burretiodendron tonkinensis (Gagnep.) Kosterm.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "118",
+        "sldlr2": "Nhội",
+        "sldlr": "Nhoi",
+        "Tenkhoahoc": "Bischofia javanica Blume(Bischofia trifoliata (Roxb.) Hook.f.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "119",
+        "sldlr2": "Phi lao",
+        "sldlr": "P.lao",
+        "Tenkhoahoc": "Casuarina equisetifolia Forst & Forst f",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "120",
+        "sldlr2": "Pơ mu",
+        "sldlr": "P.mu",
+        "Tenkhoahoc": "Fokienia hodginsii (Dunn) Henry & Thomas",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "121",
+        "sldlr2": "Phượng vĩ",
+        "sldlr": "Phuong",
+        "Tenkhoahoc": "Denolix regia (Bojer ex Hook,) Raf.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "122",
+        "sldlr2": "Quế",
+        "sldlr": "Que",
+        "Tenkhoahoc": "Cinnamomum cassia (L.) J.Presl.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "123",
+        "sldlr2": "Re hoa trắng",
+        "sldlr": "Re",
+        "Tenkhoahoc": "Cinnamomum curvifolium (Lour.) Nees (Cinnamomum albiflorum Nees)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "124",
+        "sldlr2": "Re hương",
+        "sldlr": "Re",
+        "Tenkhoahoc": "Cinnamomum partheroxylum (Jack.) Nees",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "125",
+        "sldlr2": "Ràng ràng mít",
+        "sldlr": "Rr.mit",
+        "Tenkhoahoc": "Ormosia balansae Drake",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "126",
+        "sldlr2": "Sa mu (Sa mộc)",
+        "sldlr": "S.mu",
+        "Tenkhoahoc": "Cunninghamia lanceolata (Lamb.) Hook.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "127",
+        "sldlr2": "Sa mu dầu (Ngọc am)",
+        "sldlr": "S.mu",
+        "Tenkhoahoc": "Cunninghamia lanceolata var. konishii (Hayata)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "128",
+        "sldlr2": "Sau sau",
+        "sldlr": "S.sau",
+        "Tenkhoahoc": "Liquidambar formosana Hance",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "129",
+        "sldlr2": "Sao đen",
+        "sldlr": "Sao",
+        "Tenkhoahoc": "Hopea odorata Roxb.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "130",
+        "sldlr2": "Sao mặt quỷ (Táu mặt quỷ)",
+        "sldlr": "Sao",
+        "Tenkhoahoc": "Hopea mollissima C.Y.Wu",
+        "Phanbo": "Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "131",
+        "sldlr2": "Sao xanh",
+        "sldlr": "Sao",
+        "Tenkhoahoc": "Hopea sp.",
+        "Phanbo": "Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "132",
+        "sldlr2": "Sấu",
+        "sldlr": "Sau",
+        "Tenkhoahoc": "Dracontomelon dupperreanum Pierre",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "133",
+        "sldlr2": "Sến bo bo (Vên vên nghệ)",
+        "sldlr": "Sen",
+        "Tenkhoahoc": "Shorea hypochra Hance",
+        "Phanbo": "Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "134",
+        "sldlr2": "Sến mật",
+        "sldlr": "Sen",
+        "Tenkhoahoc": "Madhuca pasquieri (Dunbard.) H. J. Lam.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "135",
+        "sldlr2": "Sến mủ (Sến cát)",
+        "sldlr": "Sen",
+        "Tenkhoahoc": "Shorea roxburghii G. Don (Shorea cochinchinensis Pierre)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "136",
+        "sldlr2": "Sến trung (Sến hải nam, Chà ran sến)",
+        "sldlr": "Sen",
+        "Tenkhoahoc": "Homalium ceylanicum Benth(Homalium hainanensis Gagnep)",
+        "Phanbo": "Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "137",
+        "sldlr2": "Sến xanh",
+        "sldlr": "Sen",
+        "Tenkhoahoc": "Mimusop elengi L.",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "138",
+        "sldlr2": "Sếu (Cơm nguội)",
+        "sldlr": "Seu",
+        "Tenkhoahoc": "Celtis sinensis Pers.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "139",
+        "sldlr2": "Sơ",
+        "sldlr": "So",
+        "Tenkhoahoc": "Camellia oleifera C. Abel.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "140",
+        "sldlr2": "Sở thường",
+        "sldlr": "So",
+        "Tenkhoahoc": "Camellia sasanqua Thunb. (Thea sasanqua (Thunb.) Pierre)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "141",
+        "sldlr2": "Sú",
+        "sldlr": "Su",
+        "Tenkhoahoc": "Aegiceras corniculatum",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "142",
+        "sldlr2": "Trắc vàng (Sưa, Trắc thối)",
+        "sldlr": "Sua",
+        "Tenkhoahoc": "Dalbergia tonkinensis Prain",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "143",
+        "sldlr2": "Tai chua",
+        "sldlr": "T.chua",
+        "Tenkhoahoc": "Garcinia cowa Roxb.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "144",
+        "sldlr2": "Tông dù (Mạy sao)",
+        "sldlr": "T.du",
+        "Tenkhoahoc": "Toona sinensis (A. Juss.) M. Roem",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "145",
+        "sldlr2": "Tô hạp hương",
+        "sldlr": "T.hap",
+        "Tenkhoahoc": "Altingia siamensis Craib.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "146",
+        "sldlr2": "Thàn mát",
+        "sldlr": "T.mat",
+        "Tenkhoahoc": "Millettia ichthyochtona Drake",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "147",
+        "sldlr2": "Táo mèo",
+        "sldlr": "T.meo",
+        "Tenkhoahoc": "Docynia indica (Wall.) Decne",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "148",
+        "sldlr2": "Thanh thất",
+        "sldlr": "T.that",
+        "Tenkhoahoc": "Ailanthus triphysa (Dennst.) Alston",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "149",
+        "sldlr2": "Thanh trà (Sơn trà)",
+        "sldlr": "T.tra",
+        "Tenkhoahoc": "Bouea oppositifolia (Roxb.) Meisn.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "150",
+        "sldlr2": "Táu mật",
+        "sldlr": "Tau",
+        "Tenkhoahoc": "Vatica odorata ssp. brevipetiolatum (Vatica tonkinensis A. Chev.)",
+        "Phanbo": "Bắc",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "151",
+        "sldlr2": "Táu muối",
+        "sldlr": "Tau",
+        "Tenkhoahoc": "Vatica diospyroides (Vatica fleuryana Tard.)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "152",
+        "sldlr2": "Tếch (Gía tỵ)",
+        "sldlr": "Tech",
+        "Tenkhoahoc": "Tectona grandis L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "153",
+        "sldlr2": "Thông ba lá",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus kesiya Royle ex Gordon",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "154",
+        "sldlr2": "Thông Ca ri bê",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus caribaea Morelet",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "155",
+        "sldlr2": "Thông đỏ nam",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Taxus wallichianus Zucc.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "156",
+        "sldlr2": "Thông đỏ trung quốc",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Taxu chinensis (Pilg.) Rehd.",
+        "Phanbo": "Bắc",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "157",
+        "sldlr2": "Thông hai lá dẹt",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus krempfii Lecomte",
+        "Phanbo": "Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "158",
+        "sldlr2": "Thông mã vĩ (Thông đuôi ngựa)",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus massoniana Lamb.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "159",
+        "sldlr2": "Thông năm lá",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus dalatensis D. Ferre",
+        "Phanbo": "Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "160",
+        "sldlr2": "Thông nhựa",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus merkusii Jungh.et de Vries",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "161",
+        "sldlr2": "Tống quán sủ (Tống quá sủ)",
+        "sldlr": "Tq.su",
+        "Tenkhoahoc": "Alnus nepalensis D. Don",
+        "Phanbo": "Bắc",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "162",
+        "sldlr2": "Trám đen",
+        "sldlr": "Tr.den",
+        "Tenkhoahoc": "Canarium pimela Leench. (Canarium nigrum, Canarium tramdenum)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "163",
+        "sldlr2": "Trám hồng (Trám ba cạnh)",
+        "sldlr": "Tr.hong",
+        "Tenkhoahoc": "Canarium bengalense Roxb.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "164",
+        "sldlr2": "Trầm dó (Trầm hương)",
+        "sldlr": "Tr.huong",
+        "Tenkhoahoc": "Aquilaria crassna Pierre ex Lecomte",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "165",
+        "sldlr2": "Trám trắng",
+        "sldlr": "Tr.trang",
+        "Tenkhoahoc": "Canarium album (Lour.) Raeusch.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "166",
+        "sldlr2": "Trâm vối",
+        "sldlr": "Tr.voi",
+        "Tenkhoahoc": "Syzygium cuminii (L.) Skeel",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "167",
+        "sldlr2": "Trắc",
+        "sldlr": "Trac",
+        "Tenkhoahoc": "Dalbergia cochinchinensis Pierre",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "168",
+        "sldlr2": "Trai",
+        "sldlr": "Trai",
+        "Tenkhoahoc": "Shorea obtusa Wall. ex Blume var. kochangensis Heim. (Shorea vulgaris Pierre)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "169",
+        "sldlr2": "Tràm (Tràm cừ)",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca cajuputi Powell",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "170",
+        "sldlr2": "Tràm lá bạc",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca argentea W. Fitzg.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "171",
+        "sldlr2": "Tràm lá dài",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca leucadendrra (L.) L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "172",
+        "sldlr2": "Tràm la ́năm gân",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca quinquenervia (Cav.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "173",
+        "sldlr2": "Tràm lá rộng",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca viridiflora",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "174",
+        "sldlr2": "Tràm salina",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca saligna",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "175",
+        "sldlr2": "Trang",
+        "sldlr": "Trang",
+        "Tenkhoahoc": "Kandelia candel (L.) Druce",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "176",
+        "sldlr2": "Trẩu",
+        "sldlr": "Trau",
+        "Tenkhoahoc": "Vernicia montana Lour.(Aleurites montana (Lour.) Wilson)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "177",
+        "sldlr2": "Trẩu cao bằng",
+        "sldlr": "Trau",
+        "Tenkhoahoc": "Vernicia fordii (Hemsl.) Airy Shaw(Aleurites fordii Hemsl.)",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "178",
+        "sldlr2": "Vù hương",
+        "sldlr": "V.huong",
+        "Tenkhoahoc": "Cinnamomum balansae Lecomte",
+        "Phanbo": "Bắc",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "179",
+        "sldlr2": "Vàng tâm",
+        "sldlr": "V.tam",
+        "Tenkhoahoc": "Manglietia dandyi (Gagnep.) Dandy (Magnolia dandyi Gagnep.)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "180",
+        "sldlr2": "Vối thuốc (Kháo dặm)",
+        "sldlr": "V.thuoc",
+        "Tenkhoahoc": "Schima wallichii var. noronhae (Blume ) Bloemb.",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "181",
+        "sldlr2": "Vạng trứng",
+        "sldlr": "V.trung",
+        "Tenkhoahoc": "Endospermum chinense Benth.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "182",
+        "sldlr2": "Vên vên",
+        "sldlr": "V.ven",
+        "Tenkhoahoc": "Anisoptera costata Korth. (Anisoptera cochinchinensis Pierre)",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "183",
+        "sldlr2": "Tô mộc (Vang)",
+        "sldlr": "Vang",
+        "Tenkhoahoc": "Caesalpinia sappan L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "184",
+        "sldlr2": "Vẹt đen (Vẹt khàng)",
+        "sldlr": "Vet",
+        "Tenkhoahoc": "Bruguiera sexangula (Lour.) Poir.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "185",
+        "sldlr2": "Vẹt dù",
+        "sldlr": "Vet",
+        "Tenkhoahoc": "Bruguiera gymnorrhiza (L.) Savigny",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "186",
+        "sldlr2": "Vẹt tách",
+        "sldlr": "Vet",
+        "Tenkhoahoc": "Bruguiera parviflora (Roxb.) Wight et Arn, ex Griff.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "187",
+        "sldlr2": "Vẹt thăng (Vẹt trụ )",
+        "sldlr": "Vet",
+        "Tenkhoahoc": "Bruguiera cylindrica (L.) Blume",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "188",
+        "sldlr2": "Xà cừ (Sọ khỉ̉)",
+        "sldlr": "X.cu",
+        "Tenkhoahoc": "Khaya senegalensis (Desr.) A. Juss.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "189",
+        "sldlr2": "Xoan đào",
+        "sldlr": "Xo.dao",
+        "Tenkhoahoc": "Prunus arborea (Blume) Kalkm(Pygeum arboreum Engl.)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "190",
+        "sldlr2": "Xoan mộc (Trương vân)",
+        "sldlr": "Xo.moc",
+        "Tenkhoahoc": "Toona surenii (Blume) Merr.(Toona febrifuga M. Roem.)",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "191",
+        "sldlr2": "Xoan nhừ (Lát xoan)",
+        "sldlr": "Xo.nhu",
+        "Tenkhoahoc": "Choerespondias axillaris (Roxb.) Burtt. & Hill",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "192",
+        "sldlr2": "Xoài",
+        "sldlr": "Xoai",
+        "Tenkhoahoc": "Mangifera indica L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "193",
+        "sldlr2": "Xoan (Xoan ta, Sầu đâu)",
+        "sldlr": "Xoan",
+        "Tenkhoahoc": "Melia azedarach L.",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "194",
+        "sldlr2": "Xoan quả to",
+        "sldlr": "Xoan",
+        "Tenkhoahoc": "Melia toosendan Sieb. & Zucc.",
+        "Phanbo": "Bắc",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "195",
+        "sldlr2": "Xoay",
+        "sldlr": "Xoay",
+        "Tenkhoahoc": "Dialium cochinchinensis Pierre",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "196",
+        "sldlr2": "Xu",
+        "sldlr": "Xu",
+        "Tenkhoahoc": "Xylocarpus moluccensis ( Lamk.) M. Roem.",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "197",
+        "sldlr2": "Xu ổi",
+        "sldlr": "Xu",
+        "Tenkhoahoc": "Xylocarpus granatum Koenig",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "198",
+        "sldlr2": "Chà là",
+        "sldlr": "Ch.la",
+        "Tenkhoahoc": "Phoenix paludosa",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "199",
+        "sldlr2": "Dừa",
+        "sldlr": "Dua",
+        "Tenkhoahoc": "Cocos",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "200",
+        "sldlr2": "Dừa nước (Dừa lá)",
+        "sldlr": "D. nước",
+        "Tenkhoahoc": "Nypa fruticans",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "201",
+        "sldlr2": "Giá",
+        "sldlr": "Giá",
+        "Tenkhoahoc": "Excoecaria agallocha",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "202",
+        "sldlr2": "Keo gai (Me keo)",
+        "sldlr": "K. gai",
+        "Tenkhoahoc": "Pithecellobium dulce",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "203",
+        "sldlr2": "Trâm bầu (Chưn bầu)",
+        "sldlr": "Tr. Bầu",
+        "Tenkhoahoc": "Combretum quadrangulare Kurz",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "500",
+        "sldlr2": "Bạch đàn",
+        "sldlr": "B.dan",
+        "Tenkhoahoc": "Eucalyptus",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "501",
+        "sldlr2": "Bần",
+        "sldlr": "Ban",
+        "Tenkhoahoc": "Sonneratia",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "502",
+        "sldlr2": "Cọ khiết",
+        "sldlr": "C.khiet",
+        "Tenkhoahoc": "Dalbergia",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "503",
+        "sldlr2": "Đước",
+        "sldlr": "Duoc",
+        "Tenkhoahoc": "Rhizophora",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "504",
+        "sldlr2": "Keo",
+        "sldlr": "Keo",
+        "Tenkhoahoc": "Acacia",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "505",
+        "sldlr2": "Lòng mang",
+        "sldlr": "L.mang",
+        "Tenkhoahoc": "Pterospermum",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "506",
+        "sldlr2": "Mấm",
+        "sldlr": "Mam",
+        "Tenkhoahoc": "Avicennia",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "507",
+        "sldlr2": "Mun",
+        "sldlr": "Mun",
+        "Tenkhoahoc": "Diospyros",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "508",
+        "sldlr2": "Re ",
+        "sldlr": "Re",
+        "Tenkhoahoc": "Cinnamomum",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "509",
+        "sldlr2": "Sa mu",
+        "sldlr": "S.mu",
+        "Tenkhoahoc": "Cunninghamia",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "510",
+        "sldlr2": "Thông",
+        "sldlr": "Thong",
+        "Tenkhoahoc": "Pinus ",
+        "Phanbo": "Bắc-Trung",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "511",
+        "sldlr2": "Tràm",
+        "sldlr": "Tram",
+        "Tenkhoahoc": "Melaleuca",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "512",
+        "sldlr2": "Vẹt",
+        "sldlr": "Vet",
+        "Tenkhoahoc": "Bruguiera",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "513",
+        "sldlr2": "Xoan",
+        "sldlr": "Xoan",
+        "Tenkhoahoc": "Melia ",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "514",
+        "sldlr2": "Xu",
+        "sldlr": "Xu",
+        "Tenkhoahoc": "Xylocarpus",
+        "Phanbo": "Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "515",
+        "sldlr2": "Cọ",
+        "sldlr": "Co",
+        "Tenkhoahoc": "Trachycarpus",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "516",
+        "sldlr2": "Dà",
+        "sldlr": "Dà",
+        "Tenkhoahoc": "Ceriops",
+        "Phanbo": "Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "517",
+        "sldlr2": "Luồng",
+        "sldlr": "Luong",
+        "Tenkhoahoc": "Dendrocalamus",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "518",
+        "sldlr2": "Mắc ca",
+        "sldlr": "M.ca",
+        "Tenkhoahoc": "Macadamia",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "519",
+        "sldlr2": "Song, mây",
+        "sldlr": "Songmay",
+        "Tenkhoahoc": "Calamus",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "520",
+        "sldlr2": "Tre/lồ ô",
+        "sldlr": "Tre",
+        "Tenkhoahoc": "Bambusa",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "521",
+        "sldlr2": "Trúc",
+        "sldlr": "Truc",
+        "Tenkhoahoc": "Ampelocalamus",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "522",
+        "sldlr2": "Vầu",
+        "sldlr": "Vau",
+        "Tenkhoahoc": "Acidosasa",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "523",
+        "sldlr2": "Tre/lồ ô",
+        "sldlr": "Tre",
+        "Tenkhoahoc": "Bambusa",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "990",
+        "sldlr2": "Loài khác, mọc nhanh",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "991",
+        "sldlr2": "Loài khác, mọc trung bình",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "992",
+        "sldlr2": "Loài khác, mọc chậm",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "993",
+        "sldlr2": "Loài khác, đặc sản, mọc nhanh",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    },
+    {
+        "maloaicay": "994",
+        "sldlr2": "Loài khác, đặc sản, mọc trung bình",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "5"
+    },
+    {
+        "maloaicay": "995",
+        "sldlr2": "Loài khác, đặc sản, mọc chậm",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "10"
+    },
+    {
+        "maloaicay": "996",
+        "sldlr2": "Tre, nứa khác",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "997",
+        "sldlr2": "Cau, dừa khác",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "998",
+        "sldlr2": "Tre, nứa đặc sản khác",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "999",
+        "sldlr2": "Cau dừa đặc sản khác",
+        "sldlr": "''",
+        "Tenkhoahoc": "''",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "0"
+    },
+    {
+        "maloaicay": "1000",
+        "sldlr2": "Loài khác",
+        "sldlr": "L.khac",
+        "Tenkhoahoc": "Others",
+        "Phanbo": "Bắc-Trung-Nam",
+        "captuoi": "3"
+    }
+]

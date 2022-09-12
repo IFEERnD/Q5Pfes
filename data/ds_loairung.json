@@ -1,0 +1,786 @@
+[
+    {
+        "TT": "1",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX giàu nguyên sinh",
+        "maldlr": "1",
+        "ldlr": "txg1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "2",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX TB nguyên sinh",
+        "maldlr": "2",
+        "ldlr": "txb1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "3",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL giàu nguyên sinh",
+        "maldlr": "3",
+        "ldlr": "rlg1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "4",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL TB nguyên sinh",
+        "maldlr": "4",
+        "ldlr": "rlb1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "5",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK giàu nguyên sinh",
+        "maldlr": "5",
+        "ldlr": "lkg1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "6",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK TB nguyên sinh",
+        "maldlr": "6",
+        "ldlr": "lkb1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "7",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK giàu nguyên sinh",
+        "maldlr": "7",
+        "ldlr": "rkg1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "8",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK TB nguyên sinh",
+        "maldlr": "8",
+        "ldlr": "rkb1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "9",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX giàu nguyên sinh",
+        "maldlr": "9",
+        "ldlr": "txdg1",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "10",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX TB nguyên sinh",
+        "maldlr": "10",
+        "ldlr": "txdb1",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "11",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập mặn nguyên sinh",
+        "maldlr": "11",
+        "ldlr": "rnm1",
+        "lapdia": "3",
+        "nggocr": "1"
+    },
+    {
+        "TT": "12",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập phèn nguyên sinh",
+        "maldlr": "12",
+        "ldlr": "rnp1",
+        "lapdia": "4",
+        "nggocr": "1"
+    },
+    {
+        "TT": "13",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập ngọt nguyên sinh",
+        "maldlr": "13",
+        "ldlr": "rnn1",
+        "lapdia": "5",
+        "nggocr": "1"
+    },
+    {
+        "TT": "14",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX giàu",
+        "maldlr": "14",
+        "ldlr": "txg",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "15",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX TB",
+        "maldlr": "15",
+        "ldlr": "txb",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "16",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX nghèo",
+        "maldlr": "16",
+        "ldlr": "txn",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "17",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX nghèo kiệt",
+        "maldlr": "17",
+        "ldlr": "txk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "18",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRTX phục hồi",
+        "maldlr": "18",
+        "ldlr": "txp",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "19",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL giàu",
+        "maldlr": "19",
+        "ldlr": "rlg",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "20",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL TB",
+        "maldlr": "20",
+        "ldlr": "rlb",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "21",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL nghèo",
+        "maldlr": "21",
+        "ldlr": "rln",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "22",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL nghèo kiệt",
+        "maldlr": "22",
+        "ldlr": "rlk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "23",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRRL phục hồi",
+        "maldlr": "23",
+        "ldlr": "rlp",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "24",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK giàu",
+        "maldlr": "24",
+        "ldlr": "lkg",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "25",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK TB",
+        "maldlr": "25",
+        "ldlr": "lkb",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "26",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK nghèo",
+        "maldlr": "26",
+        "ldlr": "lkn",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "27",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK nghèo kiệt",
+        "maldlr": "27",
+        "ldlr": "lkk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "28",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LK phục hồi",
+        "maldlr": "28",
+        "ldlr": "lkp",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "29",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK giàu",
+        "maldlr": "29",
+        "ldlr": "rkg",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "30",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK TB",
+        "maldlr": "30",
+        "ldlr": "rkb",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "31",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK nghèo",
+        "maldlr": "31",
+        "ldlr": "rkn",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "32",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK nghèo kiệt",
+        "maldlr": "32",
+        "ldlr": "rkk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "33",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đất LRLK phục hồi",
+        "maldlr": "33",
+        "ldlr": "rkp",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "34",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX giàu",
+        "maldlr": "34",
+        "ldlr": "txdg",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "35",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX TB",
+        "maldlr": "35",
+        "ldlr": "txdb",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "36",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX nghèo",
+        "maldlr": "36",
+        "ldlr": "txdn",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "37",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX nghèo kiệt",
+        "maldlr": "37",
+        "ldlr": "txdk",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "38",
+        "tentrangthai": "Rừng gỗ tự nhiên núi đá LRTX phục hồi",
+        "maldlr": "38",
+        "ldlr": "txdp",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "39",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập mặn giàu",
+        "maldlr": "39",
+        "ldlr": "rnmg",
+        "lapdia": "3",
+        "nggocr": "1"
+    },
+    {
+        "TT": "40",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập mặn trung bình",
+        "maldlr": "40",
+        "ldlr": "rnmb",
+        "lapdia": "3",
+        "nggocr": "1"
+    },
+    {
+        "TT": "41",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập mặn nghèo",
+        "maldlr": "41",
+        "ldlr": "rnmn",
+        "lapdia": "3",
+        "nggocr": "1"
+    },
+    {
+        "TT": "42",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập mặn phục hồi",
+        "maldlr": "42",
+        "ldlr": "rnmp",
+        "lapdia": "3",
+        "nggocr": "1"
+    },
+    {
+        "TT": "43",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập phèn giàu",
+        "maldlr": "43",
+        "ldlr": "rnpg",
+        "lapdia": "4",
+        "nggocr": "1"
+    },
+    {
+        "TT": "44",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập phèn trung bình",
+        "maldlr": "44",
+        "ldlr": "rnpb",
+        "lapdia": "4",
+        "nggocr": "1"
+    },
+    {
+        "TT": "45",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập phèn nghèo",
+        "maldlr": "45",
+        "ldlr": "rnpn",
+        "lapdia": "4",
+        "nggocr": "1"
+    },
+    {
+        "TT": "46",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập phèn phục hồi",
+        "maldlr": "46",
+        "ldlr": "rnpp",
+        "lapdia": "4",
+        "nggocr": "1"
+    },
+    {
+        "TT": "47",
+        "tentrangthai": "Rừng gỗ tự nhiên ngập ngọt",
+        "maldlr": "47",
+        "ldlr": "rnn",
+        "lapdia": "5",
+        "nggocr": "1"
+    },
+    {
+        "TT": "48",
+        "tentrangthai": "Rừng tre/luồng tự nhiên núi đất",
+        "maldlr": "48",
+        "ldlr": "tlu",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "49",
+        "tentrangthai": "Rừng nứa tự nhiên núi đất",
+        "maldlr": "49",
+        "ldlr": "nua",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "50",
+        "tentrangthai": "Rừng vầu tự nhiên núi đất",
+        "maldlr": "50",
+        "ldlr": "vau",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "51",
+        "tentrangthai": "Rừng lồ ô tự nhiên núi đất",
+        "maldlr": "51",
+        "ldlr": "loo",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "52",
+        "tentrangthai": "Rừng tre nứa khác tự nhiên núi đất",
+        "maldlr": "52",
+        "ldlr": "tnk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "53",
+        "tentrangthai": "Rừng tre nứa tự nhiên núi đá",
+        "maldlr": "53",
+        "ldlr": "tnd",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "54",
+        "tentrangthai": "Rừng hỗn giao G-TN tự nhiên núi đất",
+        "maldlr": "54",
+        "ldlr": "hg1",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "55",
+        "tentrangthai": "Rừng hỗn giao TN-G tự nhiên núi đất",
+        "maldlr": "55",
+        "ldlr": "hg2",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "56",
+        "tentrangthai": "Rừng hỗn giao tự nhiên núi đá",
+        "maldlr": "56",
+        "ldlr": "hgd",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "57",
+        "tentrangthai": "Rừng cau dừa tự nhiên núi đất",
+        "maldlr": "57",
+        "ldlr": "cd",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "58",
+        "tentrangthai": "Rừng cau dừa tự nhiên núi đá",
+        "maldlr": "58",
+        "ldlr": "cdd",
+        "lapdia": "2",
+        "nggocr": "1"
+    },
+    {
+        "TT": "59",
+        "tentrangthai": "Rừng cau dừa tự nhiên ngập nước ngọt",
+        "maldlr": "59",
+        "ldlr": "cdn",
+        "lapdia": "5",
+        "nggocr": "1"
+    },
+    {
+        "TT": "60",
+        "tentrangthai": "Rừng gỗ trồng núi đất",
+        "maldlr": "60",
+        "ldlr": "rtg",
+        "lapdia": "1",
+        "nggocr": "2"
+    },
+    {
+        "TT": "61",
+        "tentrangthai": "Rừng gỗ trồng núi đá",
+        "maldlr": "61",
+        "ldlr": "rtgd",
+        "lapdia": "2",
+        "nggocr": "2"
+    },
+    {
+        "TT": "62",
+        "tentrangthai": "Rừng gỗ trồng ngập mặn",
+        "maldlr": "62",
+        "ldlr": "rtm",
+        "lapdia": "3",
+        "nggocr": "2"
+    },
+    {
+        "TT": "63",
+        "tentrangthai": "Rừng gỗ trồng ngập phèn",
+        "maldlr": "63",
+        "ldlr": "rtp",
+        "lapdia": "4",
+        "nggocr": "2"
+    },
+    {
+        "TT": "64",
+        "tentrangthai": "Rừng gỗ trồng đất cát",
+        "maldlr": "64",
+        "ldlr": "rtc",
+        "lapdia": "6",
+        "nggocr": "2"
+    },
+    {
+        "TT": "65",
+        "tentrangthai": "Rừng tre nứa trồng núi đất",
+        "maldlr": "65",
+        "ldlr": "rttn",
+        "lapdia": "1",
+        "nggocr": "2"
+    },
+    {
+        "TT": "66",
+        "tentrangthai": "Rừng tre nứa trồng núi đá",
+        "maldlr": "66",
+        "ldlr": "rttnd",
+        "lapdia": "2",
+        "nggocr": "2"
+    },
+    {
+        "TT": "67",
+        "tentrangthai": "Rừng cau dừa trồng cạn",
+        "maldlr": "67",
+        "ldlr": "rtcd",
+        "lapdia": "1",
+        "nggocr": "2"
+    },
+    {
+        "TT": "68",
+        "tentrangthai": "Rừng cau dừa trồng ngập nước",
+        "maldlr": "68",
+        "ldlr": "rtcdn",
+        "lapdia": "5",
+        "nggocr": "2"
+    },
+    {
+        "TT": "69",
+        "tentrangthai": "Rừng cau dừa trồng đất cát",
+        "maldlr": "69",
+        "ldlr": "rtcdc",
+        "lapdia": "6",
+        "nggocr": "2"
+    },
+    {
+        "TT": "70",
+        "tentrangthai": "Rừng trồng khác núi đất",
+        "maldlr": "70",
+        "ldlr": "rtk",
+        "lapdia": "1",
+        "nggocr": "2"
+    },
+    {
+        "TT": "71",
+        "tentrangthai": "Rừng trồng khác núi đá",
+        "maldlr": "71",
+        "ldlr": "rtkd",
+        "lapdia": "2",
+        "nggocr": "2"
+    },
+    {
+        "TT": "72",
+        "tentrangthai": "Đất đã trồng trên núi đất",
+        "maldlr": "72",
+        "ldlr": "dtr",
+        "lapdia": "1",
+        "nggocr": "3"
+    },
+    {
+        "TT": "73",
+        "tentrangthai": "Đất đã trồng trên núi đá",
+        "maldlr": "73",
+        "ldlr": "dtrd",
+        "lapdia": "2",
+        "nggocr": "3"
+    },
+    {
+        "TT": "74",
+        "tentrangthai": "Đất đã trồng trên đất ngập mặn",
+        "maldlr": "74",
+        "ldlr": "dtrm",
+        "lapdia": "3",
+        "nggocr": "3"
+    },
+    {
+        "TT": "75",
+        "tentrangthai": "Đất đã trồng trên đất ngập phèn",
+        "maldlr": "75",
+        "ldlr": "dtrp",
+        "lapdia": "4",
+        "nggocr": "3"
+    },
+    {
+        "TT": "76",
+        "tentrangthai": "Đất đã trồng trên đất ngập ngọt",
+        "maldlr": "76",
+        "ldlr": "dtrn",
+        "lapdia": "5",
+        "nggocr": "3"
+    },
+    {
+        "TT": "77",
+        "tentrangthai": "Đất đã trồng trên bãi cát",
+        "maldlr": "77",
+        "ldlr": "dtrc",
+        "lapdia": "6",
+        "nggocr": "3"
+    },
+    {
+        "TT": "78",
+        "tentrangthai": "Đất có cây gỗ tái sinh núi đất",
+        "maldlr": "78",
+        "ldlr": "dt2",
+        "lapdia": "1",
+        "nggocr": "3"
+    },
+    {
+        "TT": "79",
+        "tentrangthai": "Đất có cây gỗ tái sinh núi đá",
+        "maldlr": "79",
+        "ldlr": "dt2d",
+        "lapdia": "2",
+        "nggocr": "3"
+    },
+    {
+        "TT": "80",
+        "tentrangthai": "Đất có cây gỗ tái sinh ngập mặn",
+        "maldlr": "80",
+        "ldlr": "dt2m",
+        "lapdia": "3",
+        "nggocr": "3"
+    },
+    {
+        "TT": "81",
+        "tentrangthai": "Đất có cây tái sinh ngập nước phèn",
+        "maldlr": "81",
+        "ldlr": "dt2p",
+        "lapdia": "4",
+        "nggocr": "3"
+    },
+    {
+        "TT": "82",
+        "tentrangthai": "Đất trống núi đất",
+        "maldlr": "82",
+        "ldlr": "dt1",
+        "lapdia": "1",
+        "nggocr": "3"
+    },
+    {
+        "TT": "83",
+        "tentrangthai": "Đất trống núi đá",
+        "maldlr": "83",
+        "ldlr": "dt1d",
+        "lapdia": "2",
+        "nggocr": "3"
+    },
+    {
+        "TT": "84",
+        "tentrangthai": "Đất trống ngập mặn",
+        "maldlr": "84",
+        "ldlr": "dt1m",
+        "lapdia": "3",
+        "nggocr": "3"
+    },
+    {
+        "TT": "85",
+        "tentrangthai": "Đất trống ngập nước phèn",
+        "maldlr": "85",
+        "ldlr": "dt1p",
+        "lapdia": "4",
+        "nggocr": "3"
+    },
+    {
+        "TT": "86",
+        "tentrangthai": "Bãi cát",
+        "maldlr": "86",
+        "ldlr": "bc1",
+        "lapdia": "6",
+        "nggocr": "3"
+    },
+    {
+        "TT": "87",
+        "tentrangthai": "Bãi cát có cây rải rác",
+        "maldlr": "87",
+        "ldlr": "bc2",
+        "lapdia": "6",
+        "nggocr": "3"
+    },
+    {
+        "TT": "88",
+        "tentrangthai": "Đất nông nghiệp núi đất",
+        "maldlr": "88",
+        "ldlr": "nn",
+        "lapdia": "1",
+        "nggocr": "3"
+    },
+    {
+        "TT": "89",
+        "tentrangthai": "Đất nông nghiệp núi đá",
+        "maldlr": "89",
+        "ldlr": "nld",
+        "lapdia": "2",
+        "nggocr": "3"
+    },
+    {
+        "TT": "90",
+        "tentrangthai": "Đất nông nghiệp ngập mặn",
+        "maldlr": "90",
+        "ldlr": "nlm",
+        "lapdia": "3",
+        "nggocr": "3"
+    },
+    {
+        "TT": "91",
+        "tentrangthai": "Đất nông nghiệp ngập nước phèn + ngọt",
+        "maldlr": "91",
+        "ldlr": "nlp",
+        "lapdia": "4",
+        "nggocr": "3"
+    },
+    {
+        "TT": "92",
+        "tentrangthai": "Mặt nước",
+        "maldlr": "92",
+        "ldlr": "mn",
+        "lapdia": "5",
+        "nggocr": "3"
+    },
+    {
+        "TT": "93",
+        "tentrangthai": "Đất khác",
+        "maldlr": "93",
+        "ldlr": "dkh",
+        "lapdia": "1",
+        "nggocr": "3"
+    },
+    {
+        "TT": "94",
+        "tentrangthai": "Rừng gỗ tự nhiên lá rộng nửa rụng lá giàu",
+        "maldlr": "94",
+        "ldlr": "nrlg",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "95",
+        "tentrangthai": "Rừng gỗ tự nhiên lá rộng nửa rụng lá TB",
+        "maldlr": "95",
+        "ldlr": "nrlb",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "96",
+        "tentrangthai": "Rừng gỗ tự nhiên lá rộng nửa rụng lá nghèo",
+        "maldlr": "96",
+        "ldlr": "nrln",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "97",
+        "tentrangthai": "Rừng gỗ tự nhiên lá rộng nửa rụng lá nghèo kiệt",
+        "maldlr": "97",
+        "ldlr": "nrlk",
+        "lapdia": "1",
+        "nggocr": "1"
+    },
+    {
+        "TT": "98",
+        "tentrangthai": "Rừng gỗ tự nhiên lá rộng nửa rụng lá phục hồi",
+        "maldlr": "98",
+        "ldlr": "nrlp",
+        "lapdia": "1",
+        "nggocr": "1"
+    }
+]

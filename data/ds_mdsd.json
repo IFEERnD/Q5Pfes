@@ -1,0 +1,62 @@
+[
+    {
+        "mdsd": "PHDN",
+        "mamdsd": "1",
+        "malr3": "1"
+    },
+    {
+        "mdsd": "PHCS",
+        "mamdsd": "2",
+        "malr3": "1"
+    },
+    {
+        "mdsd": "PHCC",
+        "mamdsd": "3",
+        "malr3": "1"
+    },
+    {
+        "mdsd": "PHMS",
+        "mamdsd": "4",
+        "malr3": "1"
+    },
+    {
+        "mdsd": "VQG",
+        "mamdsd": "5",
+        "malr3": "2"
+    },
+    {
+        "mdsd": "BTTN",
+        "mamdsd": "6",
+        "malr3": "2"
+    },
+    {
+        "mdsd": "NCKH",
+        "mamdsd": "7",
+        "malr3": "2"
+    },
+    {
+        "mdsd": "VHCQ",
+        "mamdsd": "8",
+        "malr3": "2"
+    },
+    {
+        "mdsd": "SXGL",
+        "mamdsd": "9",
+        "malr3": "3"
+    },
+    {
+        "mdsd": "SXGN",
+        "mamdsd": "10",
+        "malr3": "3"
+    },
+    {
+        "mdsd": "SXTN",
+        "mamdsd": "11",
+        "malr3": "3"
+    },
+    {
+        "mdsd": "MDK",
+        "mamdsd": "12",
+        "malr3": "3"
+    }
+]
