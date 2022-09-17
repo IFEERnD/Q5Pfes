@@ -4,14 +4,12 @@ qgisMinimumVersion=3.0
 description=v5PFES - Công cụ xây dựng bản đồ chi trả dịch vụ môi trường rừng
 version=1.0
 author=Institute of Forest Ecology and Environment (IFEE)
-email=hotropfes@ifee.edu.vn
+email=rnd@ifee.edu.vn
 
 about=The v5PFES plugin supports the Forest Protection and Development Fund of the provinces to develop the Map of Payment for Forest Environmental Services (PFES). The plugin was developed by the Institute of Forest Ecology and Environment (IFEE) based on the provisions of Decree 156/2018/ND-CP about detailed instructions on the implementation of the Forest Law, the Payment for Forest Environmental Services and the Guide notebook for develop PFES map of Viet Nam Administration of Forestry. The main functions include: Extracting forest resources monitoring map, Developing the Map of Payment for Forest Environmental Services, Database management, Statistical data (according to the forms).
 
-
-
-tracker = https://github.com/VienSinhThaiRungVaMoiTruong/v5pfes/issues
-repository=https://github.com/VienSinhThaiRungVaMoiTruong/v5pfes
+tracker = https://github.com/IFEERnD/v5Pfes/issues
+repository=https://github.com/IFEERnD/v5Pfes
 homepage=http://ifee.edu.vn
 
 category=Plugins
