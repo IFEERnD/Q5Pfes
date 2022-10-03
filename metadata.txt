@@ -2,7 +2,7 @@
 name=v5PFES
 qgisMinimumVersion=3.0
 description=v5PFES - Công cụ xây dựng bản đồ chi trả dịch vụ môi trường rừng
-version=1.0
+version=1.1
 author=Institute of Forest Ecology and Environment (IFEE)
 email=rnd@ifee.edu.vn
 

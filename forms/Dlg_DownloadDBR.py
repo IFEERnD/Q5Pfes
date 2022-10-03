@@ -42,9 +42,9 @@ class Ui_Dialog_DownloadDBR(object):
         self.btn_stop = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.btn_stop.setObjectName("btn_stop")
         self.horizontalLayout.addWidget(self.btn_stop)
-        self.lbl_database = QtWidgets.QLabel(Dialog_DownloadDBR)
-        self.lbl_database.setGeometry(QtCore.QRect(20, 35, 62, 24))
-        self.lbl_database.setObjectName("lbl_database")
+        self.lbl_database1 = QtWidgets.QLabel(Dialog_DownloadDBR)
+        self.lbl_database1.setGeometry(QtCore.QRect(20, 35, 62, 24))
+        self.lbl_database1.setObjectName("lbl_database1")
         self.lbl_database_2 = QtWidgets.QLabel(Dialog_DownloadDBR)
         self.lbl_database_2.setGeometry(QtCore.QRect(20, 88, 62, 24))
         self.lbl_database_2.setObjectName("lbl_database_2")
@@ -109,6 +109,9 @@ class Ui_Dialog_DownloadDBR(object):
         self.btn_download = QtWidgets.QPushButton(Dialog_DownloadDBR)
         self.btn_download.setGeometry(QtCore.QRect(295, 470, 75, 24))
         self.btn_download.setObjectName("btn_download")
+        self.btn_cancel = QtWidgets.QPushButton(Dialog_DownloadDBR)
+        self.btn_cancel.setGeometry(QtCore.QRect(210, 470, 75, 24))
+        self.btn_cancel.setObjectName("btn_cancel")
 
         self.retranslateUi(Dialog_DownloadDBR)
         QtCore.QMetaObject.connectSlotsByName(Dialog_DownloadDBR)
@@ -120,7 +123,7 @@ class Ui_Dialog_DownloadDBR(object):
         self.btn_checkcon.setText(_translate("Dialog_DownloadDBR", "KIỂM TRA"))
         self.btn_start.setText(_translate("Dialog_DownloadDBR", "KHỞI ĐỘNG"))
         self.btn_stop.setText(_translate("Dialog_DownloadDBR", "DỪNG"))
-        self.lbl_database.setText(_translate("Dialog_DownloadDBR", "Kết nối"))
+        self.lbl_database1.setText(_translate("Dialog_DownloadDBR", "Kết nối"))
         self.lbl_database_2.setText(_translate("Dialog_DownloadDBR", "Máy chủ"))
         self.lbl_database_3.setText(_translate("Dialog_DownloadDBR", "Cổng"))
         self.lbl_database_4.setText(_translate("Dialog_DownloadDBR", "Tài khoản"))
@@ -131,6 +134,7 @@ class Ui_Dialog_DownloadDBR(object):
         self.lbl_database_9.setText(_translate("Dialog_DownloadDBR", "Hệ tọa độ"))
         self.lbl_database_10.setText(_translate("Dialog_DownloadDBR", "Lưu thành"))
         self.btn_download.setText(_translate("Dialog_DownloadDBR", "Download"))
+        self.btn_cancel.setText(_translate("Dialog_DownloadDBR", "Cancel"))
 from qgsprojectionselectionwidget import QgsProjectionSelectionWidget
 
 

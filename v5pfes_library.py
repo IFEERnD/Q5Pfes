@@ -5,6 +5,7 @@ import os.path
 import operator
 import sys
 import re
+import asyncio
 
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication, QDir
 from qgis.PyQt.QtGui import QIcon
@@ -35,6 +36,61 @@ from PyQt5.QtWidgets import *
 from qgis.core import QgsVectorFileWriter
 import qgis.utils
 from qgis.utils import iface
+
+def config(conf_dir,matinh):
+    with open(conf_dir, 'w') as f:
+        f.write(matinh)
+
+def checkInput(self,attr_name):
+    if self.path_solution != '':
+        conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+        f = open(conf_dir, 'r')
+        conf_code = f.read()
+        matinh = int(conf_code)
+
+        in_shp = self.path_solution
+        driver = ogr.GetDriverByName("ESRI Shapefile")
+        dataSource = driver.Open(in_shp, 0)
+        layer = dataSource.GetLayer()
+        file_kq = []
+        attr = []
+        field_chuan = attr_name
+        field_names = [field.name for field in layer.schema]
+        for x in field_chuan:
+            if(x not in field_names):
+                file_kq.append(x)
+        
+        if len(file_kq) > 0:
+            self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
+            self.buttonBox.setEnabled(False)
+        else:
+            for feature in layer:
+                feat = feature['matinh']
+                attr.append(feat)
+            if matinh not in attr:
+                if matinh == 0:
+                    self.buttonBox.setEnabled(True)
+                else:
+                    self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
+                    self.buttonBox.setEnabled(False)
+            else:
+                self.buttonBox.setEnabled(True)
+
+def checkExcel (self,col_name):
+    if self.path_solution != '':
+        in_exc = self.path_solution
+        col_kq = []
+        col_chuan = col_name
+        col_exc = pd.read_excel(in_exc,skiprows=0).columns
+        for x in col_chuan:
+            if(x not in col_exc):
+                col_kq.append(x)
+        
+        if len(col_kq) > 0:
+            self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
+            self.buttonBox.setEnabled(False)
+        else:
+            self.buttonBox.setEnabled(True)
 
 def docdstinh():
     dir1 = str(Path(__file__).parent.absolute()) + '\data\provincelist.json'
@@ -246,7 +302,52 @@ def add_newfields(layer, export):
     layer.updateFields()
     QgsVectorFileWriter.writeAsVectorFormat(layer, export, "UTF-8", layer.crs(), "ESRI Shapefile")
 
-def convert_json(inputDsLuuvuc):
+def add_newfields_TH(layer, export):
+    layer.isValid()
+    layer_provider = layer.dataProvider()
+    layer_provider.addAttributes([QgsField("vungchitra", QVariant.Double,'',1,0),
+                            QgsField("chitra", QVariant.Double,'',1,0),
+                            QgsField("dgia", QVariant.Double,'',9,0),
+                            QgsField("dtichct", QVariant.Double,'',9,2),
+                            QgsField("dtichgk", QVariant.Double,'',9,2),
+                            QgsField("thanhtien", QVariant.Double,'',9,0),
+                            QgsField("k0", QVariant.Double,'',5,4),
+                            QgsField("k1", QVariant.Double,'',3,2),
+                            QgsField("k2", QVariant.Double,'',3,2),
+                            QgsField("k3", QVariant.Double,'',3,2),
+                            QgsField("k4", QVariant.Double,'',3,2),
+                            QgsField("mucct", QVariant.Double,'',2,0),
+                            QgsField("khuvuc", QVariant.Double,'',2,0),
+                            QgsField("maluuvuc", QVariant.String,'',30),
+                            QgsField("cmt", QVariant.String,'',20),
+                            QgsField("nguq", QVariant.String,'',50),
+                            QgsField("ngaycp", QVariant.String,'',20)])
+    layer.updateFields()
+    QgsVectorFileWriter.writeAsVectorFormat(layer, export, "UTF-8", layer.crs(), "ESRI Shapefile")
+
+def add_newfields_NA(layer, export):
+    layer.isValid()
+    layer_provider = layer.dataProvider()
+    layer_provider.addAttributes([QgsField("vungchitra", QVariant.Double,'',1,0),
+                            QgsField("chitra", QVariant.Double,'',1,0),
+                            QgsField("dgia", QVariant.Double,'',9,0),
+                            QgsField("dtichct", QVariant.Double,'',9,2),
+                            QgsField("dtichgk", QVariant.Double,'',9,2),
+                            QgsField("thanhtien", QVariant.Double,'',9,0),
+                            QgsField("k0", QVariant.Double,'',5,4),
+                            QgsField("k1", QVariant.Double,'',3,2),
+                            QgsField("k2", QVariant.Double,'',3,2),
+                            QgsField("k3", QVariant.Double,'',3,2),
+                            QgsField("k4", QVariant.Double,'',3,2),
+                            QgsField("mucct", QVariant.Double,'',2,0),
+                            QgsField("khuvuc", QVariant.Double,'',2,0),
+                            QgsField("maluuvuc", QVariant.String,'',30),
+                            QgsField("cql", QVariant.String,'',50),
+                            QgsField("dtuongnk", QVariant.String,'',50)])
+    layer.updateFields()
+    QgsVectorFileWriter.writeAsVectorFormat(layer, export, "UTF-8", layer.crs(), "ESRI Shapefile")
+
+def convert_json(inputDsLuuvuc,jsDir):
 
     # Open the workbook and select the first worksheet
     wb = xlrd.open_workbook(inputDsLuuvuc)
@@ -265,7 +366,7 @@ def convert_json(inputDsLuuvuc):
     # Serialize the list of dicts to JSON
     j = json.dumps(data_list,ensure_ascii=False)
     # Write to file
-    export = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
+    export = jsDir
     with open(export, 'w',encoding='utf8') as f:
         f.write(j)
 
@@ -316,7 +417,17 @@ def buffer(inputPath,outPath):
               'OUTPUT': outPath})
 
 def docdsluuvuc():
-    ds = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
+    conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+    f = open(conf_dir, 'r')
+    conf_code = f.read()
+    if conf_code == '17':
+        ds = str(Path(__file__).parent.absolute()) + '/data/dsluuvucHB.json'
+    elif conf_code == '38':
+        ds = str(Path(__file__).parent.absolute()) + '/data/dsluuvucTH.json'
+    elif conf_code == '40':
+        ds = str(Path(__file__).parent.absolute()) + '/data/dsluuvucNA.json'
+    else:
+        ds = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
     with open(ds) as f1:
         data = json.load(f1)
         return data
@@ -787,9 +898,34 @@ def payment_level(inPath):
                 feature['thanhtien'] = exp.evaluate(context)
             layer.updateFeature(feature)
 
+def export_Attribute(inPath, export):
+    conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+    f = open(conf_dir, 'r')
+    conf_code = f.read()
+
+    if conf_code == '38':
+        shp =  QgsVectorLayer(inPath, '', 'ogr')
+        layer = QgsProject.instance().addMapLayer(shp)
+        with edit(layer):
+            for feature in layer.getFeatures():
+                if feature['CMT']== NULL:
+                    feature.setAttribute(feature.fieldNameIndex('CMT'),'k')
+                if feature['nguq']== NULL:
+                    feature.setAttribute(feature.fieldNameIndex('nguq'),'k')
+                if feature['ngaycap']== NULL:
+                    feature.setAttribute(feature.fieldNameIndex('ngaycap'),'k')
+                layer.updateFeature(feature)
+        QgsVectorFileWriter.writeAsVectorFormat(layer, export, "UTF-8", layer.crs(), "xlsx") 
+        QgsProject.instance().removeAllMapLayers()
+    else:
+        shp =  QgsVectorLayer(inPath, '', 'ogr')
+        layer = QgsProject.instance().addMapLayer(shp)
+        QgsVectorFileWriter.writeAsVectorFormat(layer, export, "UTF-8", layer.crs(), "xlsx") 
+        QgsProject.instance().removeAllMapLayers()
+
 def export_THX(inPath, export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['chitra'] == 1) & (df['machur'] < 9000)]
+    df = df.loc[(df['vungchitra'] == 1) & (df['machur'] < 9000)]
     df = df.loc[:, ['matinh','tinh','mahuyen','huyen','maxa','xa','ddanh']]
     df.drop_duplicates(subset=['ddanh'], keep='first', inplace=True)
     df.to_json(export, orient='records')
@@ -802,7 +938,7 @@ def export_THX(inPath, export):
 
 def export_ChuRung(inPath, export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['chitra'] == 1) & (df['machur'] > 9000)]
+    df = df.loc[(df['vungchitra'] == 1) & (df['machur'] > 9000)]
     df = df.loc[:, ['matinh','tinh','machur','churung']]
     df.drop_duplicates(subset=['machur'], keep='first', inplace=True)
     df.to_json(export, orient='records')
@@ -825,10 +961,13 @@ def docdschurung():
         datax = json.load(f)
         return datax
 
-def report_comumune(df,maxa,output):
+def report_comumune(inpath,maxa,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.sort_values(by=['maxa','dtuong','churung'], ascending=True)
+    df_pfes = df_pfes.loc[((df_pfes['dtichct'] > 0))]
     dtuong_header = [['I','TÊN HỘ GIA ĐÌNH, CÁ NHÂN'],['II','TÊN CỘNG ĐỒNG DÂN CƯ'],['III','ỦY BAN NHÂN DÂN XÃ']]
-    df_group = df.groupby(['maxa','dtuong'])
-    df_doituong = df[df['maxa']==maxa]
+    df_group = df_pfes.groupby(['maxa','dtuong'])
+    df_doituong = df_pfes[df_pfes['maxa']==maxa]
     ds_dtuong_temp = df_doituong['dtuong'].unique().tolist()
     ds_dtuong = sorted(list(filter(lambda x: x > 0 and x < 4, ds_dtuong_temp)))
 
@@ -848,7 +987,7 @@ def report_comumune(df,maxa,output):
     temp_data = temp.dataProvider()
     temp.startEditing()
 
-    myheader = ['TT','Bên cung ứng DVMTR','Tiểu khu','Khoảnh','Lô','Tên địa phương(Nếu có)','Diện tích cung ứng DVMTR (ha)','Hệ số K','K1','K2','K3','K4','Diện tích được chi trả tiền DVMTR (ha)']
+    myheader = ['TT','Bên cung ứng DVMTR','Lô','Khoảnh','Tiểu khu','Tên địa phương(Nếu có)','Diện tích cung ứng DVMTR (ha)','Hệ số K','K1','K2','K3','K4','Diện tích được chi trả tiền DVMTR (ha)']
 
     myField = QgsField( 'ID', QVariant.Double)
     temp.addAttribute(myField)
@@ -909,10 +1048,13 @@ def report_comumune(df,maxa,output):
     layer = iface.activeLayer()
     QgsVectorFileWriter.writeAsVectorFormat(layer, output , "", layer.crs(), 'xlsx')
 
-def report_comumune_HB(df,thonban,output):
+def report_comumune_HB(inpath,thonban,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.sort_values(by=['ddanh','dtuong','churung'], ascending=True)
+    df_pfes = df_pfes.loc[((df_pfes['dtichct'] > 1))]
     dtuong_header = [['I','TÊN HỘ GIA ĐÌNH, CÁ NHÂN'],['II','TÊN CỘNG ĐỒNG DÂN CƯ'],['III','ỦY BAN NHÂN DÂN XÃ']]
-    df_group = df.groupby(['ddanh','dtuong'])
-    df_doituong = df[df['ddanh']== thonban]
+    df_group = df_pfes.groupby(['ddanh','dtuong'])
+    df_doituong = df_pfes[df_pfes['ddanh']== thonban]
     ds_dtuong_temp = df_doituong['dtuong'].unique().tolist()
     ds_dtuong = sorted(list(filter(lambda x: x > 0 and x < 4, ds_dtuong_temp)))
 
@@ -999,7 +1141,6 @@ def report_comumune_HB(df,thonban,output):
 
 def hanhchinh_export(inPath,maxa,export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['dgia'] > 0)]
     df = df.loc[(df['maxa'] == maxa)]
     df =df.loc[:, ['xa','huyen','tinh']]
     df.drop_duplicates(subset=['xa'], keep='first', inplace=True)
@@ -1026,7 +1167,6 @@ def hanhchinh_export(inPath,maxa,export):
 
 def hanhchinh_HB_export(inPath,thonban,export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['dgia'] > 0)]
     df = df.loc[(df['ddanh'] == thonban)]
     df =df.loc[:, ['ddanh','xa','huyen','tinh']]
     df.drop_duplicates(subset=['ddanh'], keep='first', inplace=True)
@@ -1051,9 +1191,34 @@ def hanhchinh_HB_export(inPath,thonban,export):
     layer = iface.activeLayer()
     QgsVectorFileWriter.writeAsVectorFormat(layer, export, "utf-8", layer.crs(), 'xlsx')
 
+def hanhchinh_NA_export(inPath,huyen,export):
+    df = pd.read_excel(inPath)
+    df = df.loc[(df['huyen'] == huyen)]
+    df =df.loc[:, ['huyen','tinh']]
+    df.drop_duplicates(subset=['huyen'], keep='first', inplace=True)
+
+    temp = QgsVectorLayer("none","result","memory")
+    temp_data = temp.dataProvider()
+    temp.startEditing()
+    myheader = ['Churung']
+
+    for head in myheader :
+        myField = QgsField( head, QVariant.String )
+        temp.addAttribute(myField)
+    temp.updateFields()
+
+    for df in df.itertuples():
+        f = QgsFeature()
+        f.setAttributes([df[1] + '-' + df[2]])
+        temp.addFeature(f)
+    temp.commitChanges()
+    QgsProject.instance().addMapLayer(temp)
+
+    layer = iface.activeLayer()
+    QgsVectorFileWriter.writeAsVectorFormat(layer, export, "utf-8", layer.crs(), 'xlsx')
+
 def tinh_export(inPath,maxa,export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['dgia'] > 0)]
     df = df.loc[(df['maxa'] == maxa)]
     df =df.loc[:, ['xa','huyen','tinh']]
     df.drop_duplicates(subset=['xa'], keep='first', inplace=True)
@@ -1080,7 +1245,6 @@ def tinh_export(inPath,maxa,export):
 
 def xa_export(inPath,maxa,export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['dgia'] > 0)]
     df = df.loc[(df['maxa'] == maxa)]
     df =df.loc[:, ['xa']]
     df.drop_duplicates(subset=['xa'], keep='first', inplace=True)
@@ -1131,7 +1295,10 @@ def convert_TVKD(text):
         output = re.sub(regex.upper(), replace.upper(), output)
     return output
 
-def report_forestActor(df,outputpath):
+def report_forestActor(inpath,machur,outputpath):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
+    df_pfes = df_pfes.loc[(df_pfes['dtichct'] > 0)]
     def tinh_doituong(df_con):
         out = df_con.pivot_table(
             index=['tk', 'khoanh', 'lo', 'k0', 'k1', 'k2', 'k3', 'k4'],
@@ -1146,7 +1313,7 @@ def report_forestActor(df,outputpath):
     temp_data = temp.dataProvider()
     temp.startEditing()
 
-    myheader = ['TT','Tiểu khu','Khoảnh','Lô','Diện tích cung ứng DVMTR (ha)','Hệ số K','K1','K2','K3','K4','Diện tích được chi trả tiền DVMTR (ha)']
+    myheader = ['TT','Lô','Khoảnh','Tiểu khu','Diện tích cung ứng DVMTR (ha)','Hệ số K','K1','K2','K3','K4','Diện tích được chi trả tiền DVMTR (ha)']
     myField = QgsField( 'ID', QVariant.Double)
     temp.addAttribute(myField)
 
@@ -1162,7 +1329,7 @@ def report_forestActor(df,outputpath):
     total_cungung = 0
     total_ct = 0
     
-    doituongX = tinh_doituong(df)
+    doituongX = tinh_doituong(df_pfes)
     for row in doituongX.itertuples():    
         row_id = row_id +1
         dtich_cung_ung = str(round(float(row[1]),2))
@@ -1183,7 +1350,10 @@ def report_forestActor(df,outputpath):
     layer = iface.activeLayer()
     QgsVectorFileWriter.writeAsVectorFormat(layer, outputpath , "", layer.crs(), 'xlsx')
 
-def report_forestActor_HB(df,outputpath):
+def report_forestActor_HB(inpath,machur,outputpath):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
+    df_pfes = df_pfes.loc[(df_pfes['dtichct'] > 0)]
     def tinh_doituong(df_con):
         out = df_con.pivot_table(
             index=['huyen','xa','lo', 'khoanh','tk' , 'k0', 'dgia','maluuvuc'],
@@ -1215,7 +1385,7 @@ def report_forestActor_HB(df,outputpath):
     total_ct = 0
     total_thanhtien = 0
     
-    doituongX = tinh_doituong(df)
+    doituongX = tinh_doituong(df_pfes)
     for row in doituongX.itertuples():    
         row_id = row_id +1
         dtich_cung_ung = str(round(float(row[1]),2))
@@ -1238,11 +1408,113 @@ def report_forestActor_HB(df,outputpath):
     layer = iface.activeLayer()
     QgsVectorFileWriter.writeAsVectorFormat(layer, outputpath , "", layer.crs(), 'xlsx')
 
+def formCR1_nggocr_NA(inpath,mahuyen,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['mahuyen'] == mahuyen)]
+    pv = df_pfes.groupby(['xa','cql']).apply(lambda sub_df: sub_df.pivot_table(
+        values=['dtich'], 
+        index=['dtuongnk'], 
+        columns=['nggocr', 'nqh'], 
+        aggfunc= np.sum ,
+        margins = True, 
+        margins_name='Tổng')).to_excel(output)
+
+def formCR1_3lr_NA(inpath,mahuyen,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['mahuyen'] == mahuyen)]
+    pv = df_pfes.groupby(['xa','cql']).apply(lambda sub_df: sub_df.pivot_table(
+        values=['dtich'], 
+        index=['dtuongnk'], 
+        columns=['malr3', 'thanhrung'], 
+        aggfunc= np.sum ,
+        margins = True, 
+        margins_name='Tổng')).to_excel(output)
+
+def formCR1_lv_NA(inpath,mahuyen,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['mahuyen'] == mahuyen)]
+    pv = df_pfes.pivot_table(   
+        index=['xa','cql','dtuongnk','maluuvuc'],
+        values=['dtich'], 
+        columns=['thanhrung'], 
+        aggfunc= np.sum ,
+        ).to_excel(output)
+
+def formCR2_nggocr_NA(inpath,machur,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
+    if machur == 9002 or machur == 9005:
+        pv = df_pfes.groupby(['tinh','huyen']).apply(lambda sub_df: sub_df.pivot_table(
+            values=['dtich'], 
+            index=['dtuongnk'], 
+            columns=['nggocr', 'nqh'], 
+            aggfunc= np.sum ,
+            margins = True, 
+            margins_name='Tổng')).to_excel(output)
+    else :
+        pv = df_pfes.groupby(['huyen','xa']).apply(lambda sub_df: sub_df.pivot_table(
+            values=['dtich'], 
+            index=['dtuongnk'], 
+            columns=['nggocr', 'nqh'], 
+            aggfunc= np.sum ,
+            margins = True, 
+            margins_name='Tổng')).to_excel(output)
+
+def formCR2_3lr_NA(inpath,machur,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
+    if machur == 9002 or machur == 9005:
+        pv = df_pfes.groupby(['tinh','huyen']).apply(lambda sub_df: sub_df.pivot_table(
+            values=['dtich'], 
+            index=['dtuongnk'], 
+            columns=['malr3', 'thanhrung'], 
+            aggfunc= np.sum ,
+            margins = True, 
+            margins_name='Tổng')).to_excel(output)
+    else:
+        pv = df_pfes.groupby(['huyen','xa']).apply(lambda sub_df: sub_df.pivot_table(
+            values=['dtich'], 
+            index=['dtuongnk'], 
+            columns=['malr3', 'thanhrung'], 
+            aggfunc= np.sum ,
+            margins = True, 
+            margins_name='Tổng')).to_excel(output)
+
+def formCR2_lv_NA(inpath,machur,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
+    if machur == 9002 or machur == 9005:
+        pv = df_pfes.pivot_table(   
+            index=['huyen','dtuongnk','maluuvuc'],
+            values=['dtich'], 
+            columns=['thanhrung'], 
+            aggfunc= np.sum ,
+            ).to_excel(output)
+    else:
+        pv = df_pfes.pivot_table(   
+            index=['xa','dtuongnk','maluuvuc'],
+            values=['dtich'], 
+            columns=['thanhrung'], 
+            aggfunc= np.sum ,
+            ).to_excel(output)
+
+def formCR1_TH(inpath,thonban,output):
+    df_pfes = pd.read_excel(inpath)
+    df_pfes = df_pfes.loc[(df_pfes['ddanh'] == thonban)]
+    df_pfes = df_pfes.loc[(df_pfes['dtuong'] == 1)]
+    df_pfes = df_pfes.loc[(df_pfes['dtichct'] > 0)]
+    pv = df_pfes.groupby(['churung']).apply(lambda sub_df: sub_df.pivot_table(
+        values=['dtichgk','dtich','dtichct','thanhtien'], 
+        index=['churung','nguq','cmt','ngaycap','lo','khoanh','tk','k0','dgia'], 
+        aggfunc= {'dtichgk':np.sum,'dtich': np.sum, 'dtichct':np.sum,'thanhtien': np.sum },
+        margins = True, 
+        margins_name='Cộng')).to_excel(output)
+
 def churung_export(inPath,machurung,export):
     df = pd.read_excel(inPath)
-    df = df.loc[(df['dgia'] > 0)]
+    df = df.loc[(df['chitra'] == 1)]
     df = df.loc[(df['machur'] == machurung)]
-    df =df.loc[:, ['churung']]
+    df = df.loc[:, ['churung']]
     df.drop_duplicates(subset=['churung'], keep='first', inplace=True)
 
     temp = QgsVectorLayer("none","result","memory")

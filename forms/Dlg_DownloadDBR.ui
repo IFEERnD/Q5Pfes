@@ -68,7 +68,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="lbl_database">
+  <widget class="QLabel" name="lbl_database1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -310,6 +310,19 @@
    </property>
    <property name="text">
     <string>Download</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancel">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>470</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
    </property>
   </widget>
  </widget>

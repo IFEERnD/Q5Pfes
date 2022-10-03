@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>531</width>
-    <height>300</height>
+    <height>262</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,7 @@
    <property name="geometry">
     <rect>
      <x>350</x>
-     <y>250</y>
+     <y>200</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -50,7 +50,7 @@
    <property name="geometry">
     <rect>
      <x>440</x>
-     <y>250</y>
+     <y>200</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -72,7 +72,7 @@
     <string>Tỉnh</string>
    </property>
   </widget>
-  <widget class="QLabel" name="lbl_churung">
+  <widget class="QLabel" name="lbl_churung2">
    <property name="geometry">
     <rect>
      <x>213</x>
@@ -89,7 +89,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>190</y>
+     <y>130</y>
      <width>161</width>
      <height>16</height>
     </rect>
@@ -102,7 +102,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>210</y>
+     <y>150</y>
      <width>491</width>
      <height>24</height>
     </rect>
@@ -119,45 +119,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>191</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Kiểu xuất biểu</string>
-   </property>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>177</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QRadioButton" name="rBtn_156">
-       <property name="text">
-        <string>Mẫu biểu theo nghị định 156</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="rBtn_HB">
-       <property name="text">
-        <string>Mẫu biểu của Quỹ Hòa Bình</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
   </widget>
  </widget>
  <resources/>

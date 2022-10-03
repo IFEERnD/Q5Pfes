@@ -182,17 +182,30 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QPushButton" name="buttonBox">
    <property name="geometry">
     <rect>
      <x>340</x>
      <y>330</y>
-     <width>151</width>
+     <width>75</width>
      <height>24</height>
     </rect>
    </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>330</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
    </property>
   </widget>
  </widget>

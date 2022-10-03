@@ -69,17 +69,19 @@ class Ui_Dialog_CapNhatDG(object):
         self.xdmct_cBx = QtWidgets.QCheckBox(self.verticalLayoutWidget_2)
         self.xdmct_cBx.setObjectName("xdmct_cBx")
         self.verticalLayout_5.addWidget(self.xdmct_cBx)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog_CapNhatDG)
-        self.buttonBox.setGeometry(QtCore.QRect(340, 330, 151, 24))
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox = QtWidgets.QPushButton(Dialog_CapNhatDG)
+        self.buttonBox.setGeometry(QtCore.QRect(340, 330, 75, 24))
         self.buttonBox.setObjectName("buttonBox")
+        self.btnCancel = QtWidgets.QPushButton(Dialog_CapNhatDG)
+        self.btnCancel.setGeometry(QtCore.QRect(417, 330, 75, 24))
+        self.btnCancel.setObjectName("btnCancel")
 
         self.retranslateUi(Dialog_CapNhatDG)
         QtCore.QMetaObject.connectSlotsByName(Dialog_CapNhatDG)
 
     def retranslateUi(self, Dialog_CapNhatDG):
         _translate = QtCore.QCoreApplication.translate
-        Dialog_CapNhatDG.setWindowTitle(_translate("Dialog_CapNhatDG", "v5PFES - Tính đơn giá chi trả"))
+        Dialog_CapNhatDG.setWindowTitle(_translate("Dialog_CapNhatDG", "v5PFES - Cập nhật đơn giá"))
         self.label1.setText(_translate("Dialog_CapNhatDG", "Chọn lớp bản đồ đầu vào (.shp)"))
         self.label_2.setText(_translate("Dialog_CapNhatDG", "Chọn lưu vực "))
         self.label_3.setText(_translate("Dialog_CapNhatDG", "Đơn giá (VNĐ):"))
@@ -90,6 +92,8 @@ class Ui_Dialog_CapNhatDG(object):
         self.groupBox_6.setTitle(_translate("Dialog_CapNhatDG", "Xác định mức chi trả"))
         self.dg_cBx.setText(_translate("Dialog_CapNhatDG", "Tính tổng đơn giá chi trả"))
         self.xdmct_cBx.setText(_translate("Dialog_CapNhatDG", "Xác định mức chi trả"))
+        self.buttonBox.setText(_translate("Dialog_CapNhatDG", "OK"))
+        self.btnCancel.setText(_translate("Dialog_CapNhatDG", "Cancel"))
 
 
 if __name__ == "__main__":

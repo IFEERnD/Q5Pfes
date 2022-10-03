@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>564</width>
-    <height>300</height>
+    <height>311</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -121,7 +121,7 @@
    <property name="geometry">
     <rect>
      <x>377</x>
-     <y>240</y>
+     <y>250</y>
      <width>161</width>
      <height>26</height>
     </rect>
@@ -142,45 +142,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>80</y>
-     <width>191</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Kiểu xuất biểu</string>
-   </property>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>177</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QRadioButton" name="rBtn_156">
-       <property name="text">
-        <string>Mẫu biểu theo nghị định 156</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="rBtn_HB">
-       <property name="text">
-        <string>Mẫu biểu của Quỹ Hòa Bình</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
   </widget>
   <widget class="QComboBox" name="combo_thonban">
    <property name="geometry">

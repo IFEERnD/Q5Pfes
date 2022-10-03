@@ -32,8 +32,12 @@ class v5pfes_menu:
 		self.v5pfes_menu = QMenu(QCoreApplication.translate("v5pfes", "v5PFES"))
 		self.iface.mainWindow().menuBar().insertMenu(self.iface.firstRightStandardMenu().menuAction(), self.v5pfes_menu)
 
+		# Menu
 
-        # Menu 
+		icon = QIcon(os.path.dirname(__file__) + "/icons/configuration.png")
+		self.cauhinh_action = QAction(icon, u'Cấu hình làm việc', self.iface.mainWindow())
+		self.cauhinh_action.triggered.connect(self.cauhinh)
+		self.v5pfes_menu.addAction(self.cauhinh_action) 
 
 		icon = QIcon(os.path.dirname(__file__) + "/icons/layers.png")
 		self.bando_DBR = QMenu(u'Khai thác bản đồ DBR')		
@@ -117,6 +121,10 @@ class v5pfes_menu:
 
 
 	##########################
+	def cauhinh(self):
+		dialog = CauHinh_Dlg(self.iface)
+		dialog.exec_()
+
 	def downbd(self):
 		dialog = DownloadDBR_Dlg(self.iface)
 		dialog.exec_()

@@ -14,6 +14,7 @@ import os.path
 import operator
 import sys
 import time
+import asyncio
 import shutil
 import re
 import glob
@@ -62,6 +63,7 @@ from pathlib import Path
 
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/forms")
+from Dlg_CauHinh import *
 from Dlg_DownloadDBR import *
 from Dlg_ChuanHoaDBR import *
 from Dlg_XayDungCTDL import *
@@ -71,6 +73,41 @@ from Dlg_XayDungCSDL import *
 from Dlg_XuatBieuNhom1 import *
 from Dlg_XuatBieuNhom2 import *
 from Dlg_CapNhatDG import *
+
+class CauHinh_Dlg(QDialog, Ui_Dialog_CauHinh):
+
+	def __init__(self, iface):
+		QDialog.__init__(self)
+		self.iface = iface
+		self.setupUi(self)
+		self.cbBox_conf.addItems([' --- Cấu hình làm việc chung --- ','17 - Cấu hình làm việc tỉnh Hòa Bình','40 - Cấu hình làm việc tỉnh Nghệ An','38 - Cấu hình làm việc tỉnh Thanh Hóa'])
+		self.buttonBox.accepted.connect(self.run)
+
+	def laymatinh(self):		
+		selected_tinh = self.cbBox_conf.currentText()
+		if self.cbBox_conf.currentIndex() > 0:
+			code = selected_tinh.split(" - ")[0]
+			return code
+
+	def laytencauhinh(self):		
+		selected_cauhinh = self.cbBox_conf.currentText()
+		if self.cbBox_conf.currentIndex() > 0:
+			cauhinh = selected_cauhinh.split(" - ")[-1]
+			return cauhinh
+
+	def run(self):
+		conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'	 
+		matinh = self.laymatinh()
+		notif = self.laytencauhinh()
+		zero = '0'
+		label = 'Cấu hình làm việc chung'
+		if matinh == NULL:
+			matinh = zero 
+		if notif == NULL:
+			notif = label 
+
+		config(conf_dir,matinh)
+		self.iface.messageBar().pushMessage("Đã " + notif, level=Qgis.Success, duration=5)		
 
 class DownloadDBR_Dlg(QDialog, Ui_Dialog_DownloadDBR):
 
@@ -83,6 +120,7 @@ class DownloadDBR_Dlg(QDialog, Ui_Dialog_DownloadDBR):
 		self.btn_stop.clicked.connect(self.stop_db)
 		self.btn_browse.clicked.connect(self.save_as)
 		self.btn_download.clicked.connect(self.checkRun)
+		self.btn_cancel.clicked.connect(self.close_form)
 		self.inHost.clear()
 		self.inHost.addItems(['LOCAL', 'VNFOREST'])
 		self.inHost.currentIndexChanged.connect(self.set_defauled)
@@ -307,6 +345,9 @@ class DownloadDBR_Dlg(QDialog, Ui_Dialog_DownloadDBR):
 				qgis.utils.iface.messageBar().clearWidgets()
 				self.iface.messageBar().pushMessage("Quá trình tải bản đồ thất bại", level=Qgis.Critical, duration=10)
 
+	def close_form(self):
+		self.close()
+
 class ChuanHoaDBR_Dlg(QDialog, Ui_Dialog_ChuanHoa):
 
 	def __init__(self, iface):
@@ -341,7 +382,7 @@ class ChuanHoaDBR_Dlg(QDialog, Ui_Dialog_ChuanHoa):
 			dataSource = driver.Open(in_shp, 0)
 			layer = dataSource.GetLayer()
 			file_kq = []
-			field_chuan = ['commune_co','compt_code','sub_compt_','plot_code','parcel_cod','map_sheet','village','area','forest_org','forest_typ','tree_spec_','planting_y','p_forest_o','plant_stat','volume_per','stem_per_h','volume_p_1','stem_per_p','site_cond_','forest_fun','actor_type','actor_id','conflict_s','land_use_c','land_use_t','prot_contr','forest_use','actor_id_p','actor_id_c','nar_for_or','old_plot_c','pos_status']
+			field_chuan = ['compt_code','plot_code','map_sheet','village','area','forest_org']
 			field_names = [field.name for field in layer.schema]
 			for x in field_chuan:
 				if(x not in field_names):
@@ -356,21 +397,8 @@ class ChuanHoaDBR_Dlg(QDialog, Ui_Dialog_ChuanHoa):
 	def select_input_xls(self):
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn danh sách chủ rừng", "", "MS - Excel (*.xlsx);;MS - Excel (*.xls)")[0])
 		self.inputChurung.setText(self.path_solution)
-
-		if self.path_solution != '':
-			in_exc = self.path_solution
-			col_kq = []
-			col_chuan = ['commune_code','actor_id','actor_type_code','actor_name']
-			col_exc = pd.read_excel(in_exc,skiprows=0).columns
-			for x in col_chuan:
-				if(x not in col_exc):
-					col_kq.append(x)
-			
-			if len(col_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.buttonBox.setEnabled(False)
-			else:
-				self.buttonBox.setEnabled(True)
+		col_name = ['commune_code','actor_id','actor_type_code','actor_name']
+		checkExcel(self,col_name)
 		
 	def select_output_shape(self):
 		self.path_solution = str(QFileDialog.getSaveFileName(self, "v5PFES-Chọn thư mục lưu kết quả chuẩn hóa", "", "Shapefile (*.shp)")[0])
@@ -455,47 +483,17 @@ class XayDungCTDL_Dlg(QDialog, Ui_Dialog_XayDungCTDL):
 		else:
 			self.iface.messageBar().pushMessage("Chưa chọn đủ dữ liệu", level=Qgis.Warning, duration=5)	
 
-	def select_input_shape(self):
-	  
+	def select_input_shape(self):	  
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn lớp bản đồ hiện trạng rừng", "", "Shapefile (*.shp)")[0])
 		self.lineEdit.setText(self.path_solution)
-
-		if self.path_solution != '':
-			in_shp = self.path_solution
-			driver = ogr.GetDriverByName("ESRI Shapefile")
-			dataSource = driver.Open(in_shp, 0)
-			layer = dataSource.GetLayer()
-			file_kq = []
-			field_chuan = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','thuad','tobando','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','nggocrt','thanhrung','mgo','mtn','mgolo','mtnlo','lapdia','mamdsd','dtuong','machur','churung']
-			field_names = [field.name for field in layer.schema]
-			for x in field_chuan:
-				if(x not in field_names):
-					file_kq.append(x)
-			
-			if len(file_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.buttonBox.setEnabled(False)
-			else:
-				self.buttonBox.setEnabled(True)						
+		attr_name = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','dtuong','machur','churung']
+		checkInput(self, attr_name)
 
 	def select_input_xls(self):
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn danh sách lưu vực", "", "MS - Excel (*.xlsx);;MS - Excel (*.xls)")[0])
 		self.lineEdit_2.setText(self.path_solution)
-
-		if self.path_solution != '':
-			in_exc = self.path_solution
-			col_kq = []
-			col_chuan = ['malv','tenlv']
-			col_exc = pd.read_excel(in_exc,skiprows=0).columns
-			for x in col_chuan:
-				if(x not in col_exc):
-					col_kq.append(x)
-			
-			if len(col_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.buttonBox.setEnabled(False)
-			else:
-				self.buttonBox.setEnabled(True)
+		col_name = ['malv','tenlv']
+		checkExcel(self,col_name)
 		
 	def select_output_shape(self):
 		self.path_solution = str(QFileDialog.getSaveFileName(self, "v5PFES-Chọn thư mục chứa lớp bản đồ đầu ra", "", "Shapefile (*.shp)")[0])
@@ -515,8 +513,16 @@ class XayDungCTDL_Dlg(QDialog, Ui_Dialog_XayDungCTDL):
 			progress.setMaximum(100) 
 			#pass the progress bar to the message Bar
 			progressMessageBar.pushWidget(progress)
+
+			conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+			f = open(conf_dir, 'r')
+			conf_code = f.read()
 			
-			tempo = str(Path(__file__).parent.absolute()) + '/tempo/tempo.shp'  
+			tempo = str(Path(__file__).parent.absolute()) + '/tempo/tempo.shp'
+			js_dir = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
+			js_dir_HB = str(Path(__file__).parent.absolute()) + '/data/dsluuvucHB.json'
+			js_dir_TH = str(Path(__file__).parent.absolute()) + '/data/dsluuvucTH.json'
+			js_dir_NA = str(Path(__file__).parent.absolute()) + '/data/dsluuvucNA.json'  
 			inpath = self.lineEdit.text()
 			outpath = self.lineEdit_3.text()
 			inputLuuvuc = self.lineEdit_2.text()
@@ -532,14 +538,24 @@ class XayDungCTDL_Dlg(QDialog, Ui_Dialog_XayDungCTDL):
 					layer = QgsProject.instance().addMapLayer(shp)
 					QgsVectorFileWriter.writeAsVectorFormat(layer, tempo, "UTF-8", layer.crs(), "ESRI Shapefile")
 					QgsProject.instance().removeAllMapLayers()
-
 				elif n ==2:
 					nshp =  QgsVectorLayer(tempo, '', 'ogr')
 					nlayer = QgsProject.instance().addMapLayer(nshp)
-					add_newfields(nlayer, outpath)
-
+					if conf_code == '38':
+						add_newfields_TH(nlayer, outpath)
+					elif conf_code == '40':
+						add_newfields_NA(nlayer, outpath)
+					else:
+						add_newfields(nlayer, outpath)
 				else:
-					convert_json(inputLuuvuc)	 
+					if conf_code == '17':
+						convert_json(inputLuuvuc,js_dir_HB)
+					elif conf_code == '38':
+						convert_json(inputLuuvuc,js_dir_TH)
+					elif conf_code == '40':
+						convert_json(inputLuuvuc,js_dir_NA)
+					else:
+						convert_json(inputLuuvuc,js_dir)	 
 					QgsProject.instance().removeAllMapLayers()
 					shp =  QgsVectorLayer(outpath, fname, 'ogr')
 					layer = QgsProject.instance().addMapLayer(shp)
@@ -579,28 +595,11 @@ class CapNhatVCT_Dlg(QDialog, Ui_Dialog_CapNhatVCT):
 		else:
 			self.iface.messageBar().pushMessage("Chưa chọn đủ dữ liệu", level=Qgis.Warning, duration=5)
 
-	def select_input_shape(self):
-	  
+	def select_input_shape(self):	  
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn lớp bản đồ đầu vào", "", "Shapefile (*.shp)")[0])
 		self.lineEdit.setText(self.path_solution)
-
-		if self.path_solution != '':
-			in_shp = self.path_solution
-			driver = ogr.GetDriverByName("ESRI Shapefile")
-			dataSource = driver.Open(in_shp, 0)
-			layer = dataSource.GetLayer()
-			file_kq = []
-			field_chuan = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','thuad','tobando','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','nggocrt','thanhrung','mgo','mtn','mgolo','mtnlo','lapdia','mamdsd','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct']
-			field_names = [field.name for field in layer.schema]
-			for x in field_chuan:
-				if(x not in field_names):
-					file_kq.append(x)
-			
-			if len(file_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.buttonBox.setEnabled(False)
-			else:
-				self.buttonBox.setEnabled(True)
+		attr_name = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct']
+		checkInput(self, attr_name)
 
 	def laydsluuvuc(self):
 		try:
@@ -626,7 +625,6 @@ class CapNhatVCT_Dlg(QDialog, Ui_Dialog_CapNhatVCT):
 			count_row = layer.GetFeatureCount()
 			if count_row > 1:
 				err +=1
-
 			if err > 0:
 				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
 				self.buttonBox.setEnabled(False)
@@ -737,30 +735,15 @@ class CapNhatDG_Dlg(QDialog, Ui_Dialog_CapNhatDG):
 		self.dg_cBx.stateChanged.connect(self.checkbox)											 
 		self.btnPrice.clicked.connect(self.calculate_price)
 		self.btnUpdate.clicked.connect(self.update_price)
-		self.buttonBox.accepted.connect(self.checkRun)
+		self.buttonBox.clicked.connect(self.checkRun)
+		self.btnCancel.clicked.connect(self.close_form)
 		self.laydsluuvuc()
 
 	def select_input_shape(self):	 
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn lớp bản đồ diễn biến rừng", "", "Shapefile (*.shp)")[0])
 		self.inputShapefile.setText(self.path_solution)
-
-		if self.path_solution != '':
-			inputShapefile = self.path_solution
-			driver = ogr.GetDriverByName("ESRI Shapefile")
-			dataSource = driver.Open(inputShapefile, 0)
-			layer = dataSource.GetLayer()
-			file_kq = []
-			field_chuan = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','thuad','tobando','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','nggocrt','thanhrung','mgo','mtn','mgolo','mtnlo','lapdia','mamdsd','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct']
-			field_names = [field.name for field in layer.schema]
-			for x in field_chuan:
-				if(x not in field_names):
-					file_kq.append(x)
-			
-			if len(file_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.btnPrice.setEnabled(False)
-			else:
-				self.btnPrice.setEnabled(True)
+		attr_name = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct','dgia','thanhtien','mucct']
+		checkInput(self,attr_name)
 
 	def checkbox(self):
 		if self.dg_cBx.isChecked():
@@ -794,7 +777,7 @@ class CapNhatDG_Dlg(QDialog, Ui_Dialog_CapNhatDG):
 
 			layer = QgsVectorLayer(inpath, '', 'ogr')
 			QgsProject.instance().addMapLayer(layer)
-			exp= 'nggocr=1 OR nggocr=2'
+			exp= 'chitra=1'
 			processing.run("qgis:selectbyattribute", {"FIELD":'maluuvuc', "INPUT":layer, "METHOD": 0,"OPERATOR": 7,"VALUE":mlv})
 			processing.run("qgis:selectbyexpression", {"EXPRESSION":exp, "INPUT":layer, "METHOD": 3})
 
@@ -862,6 +845,9 @@ class CapNhatDG_Dlg(QDialog, Ui_Dialog_CapNhatDG):
 		except:
 			self.iface.messageBar().pushMessage("Error","Quá trình tính đơn giá chi trả thất bại", level=Qgis.Critical, duration=5)
 
+	def close_form(self):
+		self.close()
+
 class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 
 	def __init__(self, iface):
@@ -900,38 +886,27 @@ class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 		else:
 			self.iface.messageBar().pushMessage("Chưa chọn đủ dữ liệu", level=Qgis.Warning, duration=5)
 
-	def select_input_shape(self):
-	  
+	def select_input_shape(self):	  
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn lớp bản đồ đầu vào", "", "Shapefile (*.shp)")[0])
 		self.inPath.setText(self.path_solution)
-
-		if self.path_solution != '':
-			in_shp = self.path_solution
-			driver = ogr.GetDriverByName("ESRI Shapefile")
-			dataSource = driver.Open(in_shp, 0)
-			layer = dataSource.GetLayer()
-			file_kq = []
-			field_chuan = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','thuad','tobando','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','nggocrt','thanhrung','mgo','mtn','mgolo','mtnlo','lapdia','mamdsd','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct']
-			field_names = [field.name for field in layer.schema]
-			for x in field_chuan:
-				if(x not in field_names):
-					file_kq.append(x)
-			
-			if len(file_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)			
-				self.lc_checkbox.setEnabled(False)
-				self.xkk_cBx.setEnabled(False)
-				self.lc_checkbox.setChecked(False)
-				self.xkk_cBx.setChecked(False)
-				self.buttonBox.setEnabled(False)
-				for i in reversed (range (self.tableWidget.rowCount())):
-					self.tableWidget.removeRow(i)
-				for i in reversed (range (self.tableWidget_2.rowCount())):
-					self.tableWidget_2.removeRow(i)
-			else:
-				self.lc_checkbox.setEnabled(True)
-				self.xkk_cBx.setEnabled(True)
-				self.buttonBox.setEnabled(True)
+		attr_name = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','khuvuc','dtichct']
+		checkInput(self,attr_name)
+		
+		if self.buttonBox.isEnabled ():
+			self.lc_checkbox.setEnabled(True)
+			self.xkk_cBx.setEnabled(True)
+			self.buttonBox.setEnabled(True)
+		else:
+			self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)			
+			self.lc_checkbox.setEnabled(False)
+			self.xkk_cBx.setEnabled(False)
+			self.lc_checkbox.setChecked(False)
+			self.xkk_cBx.setChecked(False)
+			self.buttonBox.setEnabled(False)
+			for i in reversed (range (self.tableWidget.rowCount())):
+				self.tableWidget.removeRow(i)
+			for i in reversed (range (self.tableWidget_2.rowCount())):
+				self.tableWidget_2.removeRow(i)		
 
 	def select_treespecies(self):
 		try:
@@ -1068,10 +1043,8 @@ class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 				if n ==1:		 
 					shp =  QgsVectorLayer(inpath, '', 'ogr')
 					layer = QgsProject.instance().addMapLayer(shp)
-
 					QgsVectorFileWriter.writeAsVectorFormat(layer, tempo, "UTF-8", layer.crs(), "ESRI Shapefile")
 					QgsProject.instance().removeAllMapLayers()
-
 				elif n==2:
 					nshp =  QgsVectorLayer(tempo, '', 'ogr')
 					nlayer = QgsProject.instance().addMapLayer(nshp)	
@@ -1079,38 +1052,32 @@ class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 						rtn_payment(nlayer)					
 					else:
 						pass
-
 				elif n==3:
 					if self.rtg_checkbox.isChecked():
 						rtg_payment(nlayer) 
 					else:
-						pass
-						
+						pass						
 				elif n==4:
 					if self.rttn_checkbox.isChecked():
 						rttn_payment(nlayer) 
 					else:
 						pass	
-
 				elif n==5:
 					if self.rtk_checkbox.isChecked():
 						rtk_payment(nlayer) 
 					else:
 						pass
-
 				elif n==6:
 					if self.ctr_checkbox.isChecked():
 						ctr_payment(nlayer) 
 					else:
 						pass
-
 				elif n==7:
 					if self.lc_checkbox.isChecked():
 						lc_payment(nlayer,ds_loaicay_ct,outpath)
 					else:
 						lc__non_payment(nlayer,outpath)
-					QgsProject.instance().removeAllMapLayers()
-						
+					QgsProject.instance().removeAllMapLayers()						
 				elif n==8:
 					if self.xkk_cBx.isChecked():		 
 						mshp =  QgsVectorLayer(outpath, '', 'ogr')
@@ -1120,7 +1087,6 @@ class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 					else:
 						join_xkk(outpath)
 					QgsProject.instance().removeAllMapLayers()
-
 				elif n==9:
 					if self.noK_rBtn.isChecked():
 						update_K(outpath)					
@@ -1143,17 +1109,14 @@ class CapNhatDTCT_Dlg(QDialog, Ui_Dialog_CapNhatDTCT):
 						if self.k4_cBx.isChecked():
 							update_K4(outpath)
 						else:
-							update_K4_uncheck(outpath)
-						
-						update_K0(outpath)
-				
+							update_K4_uncheck(outpath)						
+						update_K0(outpath)				
 				else:
 					payment_area(outpath)		
 									 
 					QgsProject.instance().removeAllMapLayers()		
 					shp =  QgsVectorLayer(outpath, fname, 'ogr')
 					layer = QgsProject.instance().addMapLayer(shp)
-
 				percent = (i/float(10)) * 100
 				progress.setValue(percent)				
 				time.sleep(1) 
@@ -1173,7 +1136,6 @@ class XayDungCSDL_Dlg(QDialog, Ui_Dialog_XayDungCSDL):
 		self.lineEdit.setText('')
 		self.InButton.clicked.connect(self.select_input_shape)
 		self.buttonBox.accepted.connect(self.checkRun)
-		#self.inPath.setText('')
 		orgEncoding=QgsSettings().value('/Processing/encoding') # save setting
 		QgsSettings().setValue('/Processing/encoding', 'utf-8') # set uft8	
 
@@ -1186,24 +1148,22 @@ class XayDungCSDL_Dlg(QDialog, Ui_Dialog_XayDungCSDL):
 	def select_input_shape(self):	  
 		self.path_solution = str(QFileDialog.getOpenFileName(self, "v5PFES-Chọn lớp bản đồ đầu vào", "", "Shapefile (*.shp)")[0])
 		self.lineEdit.setText(self.path_solution)
+		conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+		f = open(conf_dir, 'r')
+		conf_code = f.read()
 
-		if self.path_solution != '':
-			in_shp = self.path_solution
-			driver = ogr.GetDriverByName("ESRI Shapefile")
-			dataSource = driver.Open(in_shp, 0)
-			layer = dataSource.GetLayer()
-			file_kq = []
-			field_chuan = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','thuad','tobando','ddanh','dtich','nggocr','maldlr','ldlr','sldlr','malr3','mgo','mtn','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','dtichct','dgia']
-			field_names = [field.name for field in layer.schema]
-			for x in field_chuan:
-				if(x not in field_names):
-					file_kq.append(x)
-			
-			if len(file_kq) > 0:
-				self.iface.messageBar().pushMessage("Dữ liệu đầu vào không hợp lệ", level=Qgis.Warning, duration=5)
-				self.buttonBox.setEnabled(False)
-			else:
-				self.buttonBox.setEnabled(True)				
+		attr_name = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','dtichct']
+		attr_name_HB = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','dtichct','dgia','thanhtien']
+		attr_name_TH = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','dtichct','dtichgk','dgia','thanhtien','cmt','nguq','ngaycap']
+		attr_name_NA = ['maxa','mahuyen','matinh','xa','huyen','tinh','tk','khoanh','lo','ddanh','dtich','nggocr','maldlr','ldlr','thanhrung','nqh','malr3','dtuong','machur','churung','vungchitra','chitra','maluuvuc','k0','k1','k2','k3','k4','dtichct','cql','dtuongnk']		
+		if conf_code == '17':
+			checkInput(self,attr_name_HB)
+		elif conf_code == '38':
+			checkInput(self,attr_name_TH)
+		elif conf_code == '40':
+			checkInput(self,attr_name_NA)
+		else:
+			checkInput(self,attr_name)
 
 	def run(self):
 		try:
@@ -1219,6 +1179,10 @@ class XayDungCSDL_Dlg(QDialog, Ui_Dialog_XayDungCSDL):
 			progress.setMaximum(100) 
 			#pass the progress bar to the message Bar
 			progressMessageBar.pushWidget(progress)
+
+			conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+			f = open(conf_dir, 'r')
+			conf_code = f.read()
 	  
 			tempo = str(Path(__file__).parent.absolute()) + '/tempo/tempo.xlsx'
 			tempo_THX = str(Path(__file__).parent.absolute()) + '/tempo/THX.json'
@@ -1229,15 +1193,11 @@ class XayDungCSDL_Dlg(QDialog, Ui_Dialog_XayDungCSDL):
 			for n in range(1,4):
 				i=i+1
 				if n==1:
-					shp =  QgsVectorLayer(inpath, '', 'ogr')
-					layer = QgsProject.instance().addMapLayer(shp)
-					QgsVectorFileWriter.writeAsVectorFormat(layer, tempo, "UTF-8", layer.crs(), "xlsx")	
-					QgsProject.instance().removeAllMapLayers()				
+					export_Attribute(inpath,tempo)
 				elif n==2:
 					export_THX(tempo,tempo_THX)
 				else:
-					export_ChuRung(tempo,tempo_ChuRung)								 
-					
+					export_ChuRung(tempo,tempo_ChuRung)								 					
 
 				percent = (i/float(3)) * 100
 				progress.setValue(percent)				
@@ -1258,34 +1218,35 @@ class XuatBieuNhom1_Dlg(QDialog, Ui_Dialog_XuatBieuNhom1):
 		self.setupUi(self)
 		self.output_path.setText('')
 		self.toolButton.clicked.connect(self.select_output)
-		self.rBtn_156.setChecked(True)
-		self.rBtn_156.toggled.connect(self.checkCombo)
-		self.combo_thonban.setEnabled(False)
-		self.combo_thonban.clear()
 		self.btn_OK.clicked.connect(self.checkRun)
 		self.btn_cancel.clicked.connect(self.close_form)
 		self.laydstinh()
 		self.laydshuyen()
-		self.laydsxa()		
+		self.laydsxa()
+		self.laydsthonban()		
 		self.com_tinh.currentIndexChanged.connect(self.laydshuyen)
 		self.com_huyen.currentIndexChanged.connect(self.laydsxa)
 		self.combo_xa.currentIndexChanged.connect(self.laydsthonban)
 		orgEncoding=QgsSettings().value('/Processing/encoding') # save setting
-		QgsSettings().setValue('/Processing/encoding', 'utf-8') # set uft8	
+		QgsSettings().setValue('/Processing/encoding', 'utf-8') # set uft8
+
+		conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+		f = open(conf_dir, 'r')
+		conf_code = f.read()
+
+		if conf_code == '0':
+			self.combo_thonban.setEnabled(False)
+			self.combo_thonban.clear()
+		if conf_code == '40':
+			self.combo_xa.setEnabled(False)
+			self.combo_thonban.setEnabled(False)
+			self.combo_thonban.clear()
 
 	def checkRun(self):
 		if self.output_path.text() != '':
 			self.run()
 		else:
-			self.iface.messageBar().pushMessage("Chưa chọn thư mục lưu file kết quả", level=Qgis.Warning, duration=5)
-
-	def checkCombo(self):
-		if self.rBtn_156.isChecked():
-			self.combo_thonban.setEnabled(False)
-			self.combo_thonban.clear()
-		else:
-			self.combo_thonban.setEnabled(True)
-			self.laydsthonban()
+			self.iface.messageBar().pushMessage("Chưa chọn thư mục lưu file kết quả", level=Qgis.Warning, duration=5)			
 
 	def laydstinh(self):
 		try:
@@ -1352,6 +1313,15 @@ class XuatBieuNhom1_Dlg(QDialog, Ui_Dialog_XuatBieuNhom1):
 		except:
 			self.iface.messageBar().pushMessage("Chưa xây dựng CSDL", level=Qgis.Warning, duration=2)
 
+	def laymahuyen(self):
+		tenhuyen = self.com_huyen.currentText()
+		dshuyen = docdshanhchinh()
+		for huyen in dshuyen:
+			if huyen['huyen'] == tenhuyen:
+				mahuyen = huyen['mahuyen']
+				value = {'mahuyen': mahuyen}
+				return value
+
 	def select_output(self):
 		self.path_solution = str(QFileDialog.getExistingDirectory(self, "v5PFES-Chọn thư mục lưu kết quả"))
 		self.output_path.setText(self.path_solution)
@@ -1370,6 +1340,10 @@ class XuatBieuNhom1_Dlg(QDialog, Ui_Dialog_XuatBieuNhom1):
 			#pass the progress bar to the message Bar
 			progressMessageBar.pushWidget(progress)
 
+			conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+			f = open(conf_dir, 'r')
+			conf_code = f.read()
+
 			tempo = str(Path(__file__).parent.absolute()) + '/tempo/tempo.xlsx'
 			outpath = self.output_path.text()
 			tinh = self.com_tinh.currentText()
@@ -1377,80 +1351,119 @@ class XuatBieuNhom1_Dlg(QDialog, Ui_Dialog_XuatBieuNhom1):
 			xa = self.combo_xa.currentText()
 			thonban = self.combo_thonban.currentText()
 			maxa = (self.laymaxa())['maxa']
+			mahuyen = (self.laymahuyen())['mahuyen']
 
 			export = outpath + '/bieu1.xlsx'
+			export_ngr = outpath + '/CR1_NguonGoc.xlsx'
+			export_cnr = outpath + '/CR1_3LR.xlsx'
+			export_lv = outpath + '/CR1_LuuVuc.xlsx'
 			hc_out = outpath + '/TenHanhChinh.xlsx'
 			tinh_out = outpath + '/TenTinh.xlsx'
 			xa_out = outpath + '/TenXa.xlsx'
 			copy = str(Path(__file__).parent.absolute()) + '/data/Mau12_14.xlsm'
 			copy_HB = str(Path(__file__).parent.absolute()) + '/data/Mau12_14_HB.xlsm'
+			copy_TH = str(Path(__file__).parent.absolute()) + '/data/MauCR1_ThanhHoa.xlsm'
+			copy_NA = str(Path(__file__).parent.absolute()) + '/data/MauCR1_NgheAn.xlsm'
 			copy_js = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
+			copy_js_NA = str(Path(__file__).parent.absolute()) + '/data/dsluuvucNA.json'
+			copy_js_HB = str(Path(__file__).parent.absolute()) + '/data/dsluuvucHB.json'
 			paste = outpath + '/' + str(maxa) +'_'+ convert_TVKD(xa)+'.xlsm'
+			paste_NA = outpath + '/' + str(mahuyen) +'_'+ convert_TVKD(huyen)+'.xlsm'
 			paste_HB = outpath + '/' + str(maxa) +'_'+ convert_TVKD(xa)+'_'+ convert_TVKD(thonban) + '.xlsm'
 			paste_js = outpath + '/dsluuvuc.json'
 			run = 'start excel.exe '
 
-			if self.rBtn_156.isChecked():
-				self.combo_thonban.setEnabled(False)
+			if conf_code == '17':
 				i=0
-				for n in range(1,7):
+				for n in range(1,4):
 					i=i+1
 					if n==1:
-						df_pfes = pd.read_excel(tempo)
-						# ds_maxa = sorted(df_pfes['maxa'].unique().tolist())
-						df_pfes = df_pfes.sort_values(by=['maxa','dtuong','churung'], ascending=True)
-						df_pfes = df_pfes.loc[((df_pfes['chitra'] == 1))]				
+						report_comumune_HB(tempo,thonban,export)
 					elif n==2:
-						report_comumune(df_pfes,maxa,export)
+						hanhchinh_HB_export(tempo,thonban,hc_out)
+					else:
+						shutil.copy2(copy_HB, paste_HB)
+						shutil.copy2(copy_js_HB, paste_js)
+						os.system(run + paste_HB)
+					QgsProject.instance().removeAllMapLayers()	
+				
+					percent = (i/float(3)) * 100
+					progress.setValue(percent)				
+					time.sleep(1) 
+				qgis.utils.iface.messageBar().clearWidgets()					  
+				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
+
+			elif conf_code == '38':
+				i=0
+				for n in range(1,4):
+					i=i+1			
+					if n==1:
+						formCR1_TH(tempo,thonban,export)
+					elif n==2:
+						hanhchinh_HB_export(tempo,thonban,hc_out)
+					else:
+						shutil.copy2(copy_TH, paste_HB)
+						shutil.copy2(copy_js, paste_js)
+						os.system(run + paste_HB)
+					QgsProject.instance().removeAllMapLayers()	
+				
+					percent = (i/float(3)) * 100
+					progress.setValue(percent)				
+					time.sleep(1) 
+				qgis.utils.iface.messageBar().clearWidgets()					  
+				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
+				time.sleep(30)
+
+			elif conf_code == '40':
+				i=0
+				for n in range(1,6):
+					i=i+1
+					if n==1:
+						formCR1_nggocr_NA(tempo,mahuyen,export_ngr)	
+					elif n==2:
+						formCR1_3lr_NA(tempo,mahuyen,export_cnr)
 					elif n==3:
-						hanhchinh_export(tempo,maxa,hc_out)
+						formCR1_lv_NA(tempo,mahuyen,export_lv)
 					elif n==4:
+						hanhchinh_NA_export(tempo,huyen,hc_out)								
+					else:
+						shutil.copy2(copy_NA, paste_NA)
+						shutil.copy2(copy_js_NA, paste_js)
+						os.system(run + paste_NA)
+					QgsProject.instance().removeAllMapLayers()					
+					percent = (i/float(5)) * 100
+					progress.setValue(percent)				
+					time.sleep(1) 
+				qgis.utils.iface.messageBar().clearWidgets()					  
+				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
+
+			else:
+				i=0
+				for n in range(1,6):
+					i=i+1
+					if n==1:
+						report_comumune(tempo,maxa,export)
+					elif n==2:
+						hanhchinh_export(tempo,maxa,hc_out)
+					elif n==3:
 						tinh_export(tempo,maxa,tinh_out)
-					elif n==5:
+					elif n==4:
 						xa_export(tempo,maxa,xa_out)
 					else:
 						shutil.copy2(copy, paste)
 						os.system(run + paste)
 					QgsProject.instance().removeAllMapLayers()	
 
-					percent = (i/float(6)) * 100
+					percent = (i/float(5)) * 100
 					progress.setValue(percent)				
 					time.sleep(1) 
 				qgis.utils.iface.messageBar().clearWidgets()					  
 				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
-			else:
-				self.combo_thonban.setEnabled(True)
-				i=0
-				for n in range(1,7):
-					i=i+1
-					if n==1:
-						df_pfes = pd.read_excel(tempo)
-						# ds_maxa = sorted(df_pfes['maxa'].unique().tolist())
-						df_pfes = df_pfes.sort_values(by=['ddanh','dtuong','churung'], ascending=True)
-						df_pfes = df_pfes.loc[((df_pfes['chitra'] == 1))]				
-					elif n==2:
-						report_comumune_HB(df_pfes,thonban,export)
-					elif n==3:
-						hanhchinh_HB_export(tempo,thonban,hc_out)
-					elif n==4:
-						tinh_export(tempo,maxa,tinh_out)
-					elif n==5:
-						xa_export(tempo,maxa,xa_out)
-					else:
-						shutil.copy2(copy_HB, paste_HB)
-						shutil.copy2(copy_js, paste_js)
-						os.system(run + paste_HB)
-					QgsProject.instance().removeAllMapLayers()	
-				
-					percent = (i/float(6)) * 100
-					progress.setValue(percent)				
-					time.sleep(1) 
-				qgis.utils.iface.messageBar().clearWidgets()					  
-				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
+
 		except:
 			qgis.utils.iface.messageBar().clearWidgets()
 			self.iface.messageBar().pushMessage("Error","Quá trình xuất biểu thất bại", level=Qgis.Critical, duration=5)
-	
+
 	def close_form(self):
 		pathout = self.output_path.text()
 		databases = filter(os.path.isfile, glob.glob(pathout + '/*.xlsm'))
@@ -1469,8 +1482,13 @@ class XuatBieuNhom1_Dlg(QDialog, Ui_Dialog_XuatBieuNhom1):
 			os.remove(pathout + '/bieu2.xlsx')
 		if os.path.exists(pathout + '/dsluuvuc.json'):
 			os.remove(pathout + '/dsluuvuc.json')
-		self.close()
-	
+		if os.path.exists(pathout + '/CR1_NguonGoc.xlsx'):
+			os.remove(pathout + '/CR1_NguonGoc.xlsx')
+		if os.path.exists(pathout + '/CR1_3LR.xlsx'):
+			os.remove(pathout + '/CR1_3LR.xlsx')
+		if os.path.exists(pathout + '/CR1_LuuVuc.xlsx'):
+			os.remove(pathout + '/CR1_LuuVuc.xlsx')
+		self.close()	
 
 class XuatBieuNhom2_Dlg(QDialog, Ui_Dialog_XuatBieuNhom2):
 	def __init__(self, iface):
@@ -1479,7 +1497,6 @@ class XuatBieuNhom2_Dlg(QDialog, Ui_Dialog_XuatBieuNhom2):
 		self.setupUi(self)
 		self.out_path.setText('')											 
 		self.btn_path.clicked.connect(self.select_output)
-		self.rBtn_156.setChecked(True)
 		self.btn_ok.clicked.connect(self.checkRun)
 		self.btn_cancel.clicked.connect(self.close_form)
 		self.laydscr()
@@ -1545,36 +1562,66 @@ class XuatBieuNhom2_Dlg(QDialog, Ui_Dialog_XuatBieuNhom2):
 			#pass the progress bar to the message Bar
 			progressMessageBar.pushWidget(progress)
 
+			conf_dir = str(Path(__file__).parent.absolute()) + '/data/config.txt'
+			f = open(conf_dir, 'r')
+			conf_code = f.read()
+
 			tempo = str(Path(__file__).parent.absolute()) + '/tempo/tempo.xlsx'
 			outpath = self.out_path.text()
 			cr = self.com_churung.currentText()
 			machur = (self.layma())['macr']
 			export = outpath + '/bieu2.xlsx'
+			export_ngr = outpath + '/CR2_NguonGoc.xlsx'
+			export_cnr = outpath + '/CR2_3LR.xlsx'
+			export_lv = outpath + '/CR2_LuuVuc.xlsx'
 			chur_out = outpath + '/TenHanhChinh.xlsx'
 			tinh_out = outpath + '/TenTinh.xlsx'
 			copy = str(Path(__file__).parent.absolute()) + '/data/Mau13_14.xlsm'
 			copy_HB = str(Path(__file__).parent.absolute()) + '/data/Mau13_14_HB.xlsm'
+			copy_NA = str(Path(__file__).parent.absolute()) + '/data/MauCR2_NgheAn.xlsm'
 			copy_js = str(Path(__file__).parent.absolute()) + '/data/dsluuvuc.json'
+			copy_js_NA = str(Path(__file__).parent.absolute()) + '/data/dsluuvucNA.json'
+			copy_js_HB = str(Path(__file__).parent.absolute()) + '/data/dsluuvucHB.json'
 			paste = outpath + '/' + str(machur) +'_'+ convert_TVKD(cr)+'.xlsm'
 			paste_js = outpath + '/dsluuvuc.json'
 			run = 'start excel.exe '
-			if self.rBtn_156.isChecked():
+
+			if conf_code == '17':
+				i=0
+				for n in range(1,5):
+					i=i+1
+					if n==1:
+						report_forestActor_HB(tempo,machur,export)
+					elif n==2:
+						churung_export(tempo,machur,chur_out)
+					elif n==3:
+						province_export(tempo,machur,tinh_out)
+					else:
+						shutil.copy2(copy_HB, paste)
+						shutil.copy2(copy_js_HB, paste_js)
+						os.system(run + paste)
+					QgsProject.instance().removeAllMapLayers()
+
+					percent = (i/float(4)) * 100
+					progress.setValue(percent)
+					time.sleep(1)
+				qgis.utils.iface.messageBar().clearWidgets()
+				self.iface.messageBar().pushMessage("Quá trình xuất biểu thành công", level=Qgis.Success, duration=5)
+			elif conf_code == '40':
 				i=0
 				for n in range(1,6):
 					i=i+1
 					if n==1:
-						df_pfes = pd.read_excel(tempo)
-						df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
-						df_pfes = df_pfes.loc[((df_pfes['chitra'] == 1))]
-						df_pfes = df_pfes.loc[(df_pfes['dtichct'] > 0)]
+						formCR2_nggocr_NA(tempo,machur,export_ngr)					
 					elif n==2:
-						report_forestActor(df_pfes, export)
+						formCR2_3lr_NA(tempo,machur,export_cnr)
 					elif n==3:
-						churung_export(tempo,machur,chur_out)
+						formCR2_lv_NA(tempo,machur,export_lv)
 					elif n==4:
-						province_export(tempo,machur,tinh_out)
+						churung_export(tempo,machur,chur_out)
 					else:
-						shutil.copy2(copy, paste)
+						shutil.copy2(copy_NA, paste)
+						shutil.copy2(copy_js_NA, paste_js)
 						os.system(run + paste)
 					QgsProject.instance().removeAllMapLayers()
 
@@ -1586,26 +1633,20 @@ class XuatBieuNhom2_Dlg(QDialog, Ui_Dialog_XuatBieuNhom2):
 
 			else:
 				i=0
-				for n in range(1,6):
+				for n in range(1,5):
 					i=i+1
 					if n==1:
-						df_pfes = pd.read_excel(tempo)
-						df_pfes = df_pfes.loc[(df_pfes['machur'] == machur)]
-						df_pfes = df_pfes.loc[((df_pfes['chitra'] == 1))]
-						df_pfes = df_pfes.loc[(df_pfes['dtichct'] > 0)]
+						report_forestActor(tempo,machur,export)
 					elif n==2:
-						report_forestActor_HB(df_pfes, export)
-					elif n==3:
 						churung_export(tempo,machur,chur_out)
-					elif n==4:
+					elif n==3:
 						province_export(tempo,machur,tinh_out)
 					else:
-						shutil.copy2(copy_HB, paste)
-						shutil.copy2(copy_js, paste_js)
+						shutil.copy2(copy, paste)
 						os.system(run + paste)
 					QgsProject.instance().removeAllMapLayers()
 
-					percent = (i/float(5)) * 100
+					percent = (i/float(4)) * 100
 					progress.setValue(percent)
 					time.sleep(1)
 				qgis.utils.iface.messageBar().clearWidgets()
@@ -1633,5 +1674,11 @@ class XuatBieuNhom2_Dlg(QDialog, Ui_Dialog_XuatBieuNhom2):
 			os.remove(pathout + '/bieu2.xlsx')
 		if os.path.exists(pathout + '/dsluuvuc.json'):
 			os.remove(pathout + '/dsluuvuc.json')
+		if os.path.exists(pathout + '/CR2_NguonGoc.xlsx'):
+			os.remove(pathout + '/CR2_NguonGoc.xlsx')
+		if os.path.exists(pathout + '/CR2_3LR.xlsx'):
+			os.remove(pathout + '/CR2_3LR.xlsx')
+		if os.path.exists(pathout + '/CR2_LuuVuc.xlsx'):
+			os.remove(pathout + '/CR2_LuuVuc.xlsx')
 		self.close()
 	
